@@ -1,22 +1,24 @@
 package model.bean;
 
-public class Restaurant {
+public class Accommodation {
     private int id;
     private String name;
     private String contact;
     private String owner;
     private String address;
+    private String website;
 
-    public Restaurant() {
+    public Accommodation() {
         // Default constructor
     }
 
-    public Restaurant(int id, String name, String contact, String owner, String address) {
+    public Accommodation(int id, String name, String contact, String owner, String address, String website) {
         this.id = id;
         this.name = name;
         this.contact = contact;
         this.owner = owner;
         this.address = address;
+        this.website = website;
     }
 
     public int getId() {
@@ -57,5 +59,13 @@ public class Restaurant {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
     }
 }
