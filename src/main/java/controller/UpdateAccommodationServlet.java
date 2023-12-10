@@ -25,6 +25,8 @@ public class UpdateAccommodationServlet extends BaseServlet {
 		String address = request.getParameter("address");
 		String website = request.getParameter("website");
 		
+		System.out.println("Nhà nghỉ 1 : " + name);
+		
 		// Server validation logic ...
 		
 		var updatedAccom = new Accommodation(id, name, contact, owner, address, website);

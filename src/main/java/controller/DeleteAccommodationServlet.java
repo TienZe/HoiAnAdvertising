@@ -6,7 +6,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import controller.BaseServlet.TempData;
 import dto.AlertMessage;
 import model.bo.AccommodationBO;
 

@@ -31,15 +31,15 @@ public class EventBO implements PaginatedBO<Event> {
 		return eventDAO.count(filter);
 	}
 	
-//	public Accommodation getById(int id) throws ClassNotFoundException, SQLException {
-//		return accommodationDAO.getByID(id);
-//	}
+	public Event getById(int id) throws ClassNotFoundException, SQLException {
+		return eventDAO.getByID(id);
+	}
 //	
 //	public boolean add(Accommodation accom) throws ClassNotFoundException, SQLException {
 //		return accommodationDAO.add(accom);
 //	}
 //	
-//	public boolean update(Accommodation accom) throws ClassNotFoundException, SQLException {
-//		return accommodationDAO.update(accom);
-//	}
+	public boolean update(Event event) throws ClassNotFoundException, SQLException {
+		return eventDAO.update(event);
+	}
 }
