@@ -10,7 +10,7 @@ import dto.PaginatedList;
 import model.bean.Accommodation;
 import model.bo.AccommodationBO;
 
-@WebServlet({ "/Admin/Accommodation", "/Admin" })
+@WebServlet({ "/Admin/Accommodation", "/Admin/Accommodation/", "/Admin", "/Admin/" })
 public class ListAccommodationServlet extends BaseServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -36,7 +36,6 @@ public class ListAccommodationServlet extends BaseServlet {
 				paginatedList = accommodationBO.createPaginatedList(pageIndex, pageSize);	
 			} else {
 				paginatedList = accommodationBO.createPaginatedList(pageIndex, pageSize, searchKey);
-				
 				request.setAttribute("searchKey", searchKey);
 			}
 			

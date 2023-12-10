@@ -1,19 +1,29 @@
 package controller;
 
 import java.io.IOException;
+import java.util.HashMap;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 
-import controller.BaseServlet.Error;
-
 public class BaseServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	
 	protected void returnView(String pathToView, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.getRequestDispatcher(pathToView).forward(request, response);
+	}
+	
+	protected void redirecTo(String relativePathFromProject, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		response.sendRedirect(request.getContextPath() + "/" + relativePathFromProject);
+	}
+	
+	// Redirect with TempData
+	protected void redirectTo(String relativePathFromProject, TempData tempData, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		storeTempData(request, tempData);
+		response.sendRedirect(request.getContextPath() + "/" + relativePathFromProject);
 	}
 	
 	protected void returnJson(Object result, HttpServletResponse response) throws IOException {
@@ -33,7 +43,12 @@ public class BaseServlet extends HttpServlet {
 		returnJson(new Error(errorCode, errorMessage), response);
 	}
 	
-	static class Error {
+	protected void storeTempData(HttpServletRequest request, TempData tempData) {
+		var session = request.getSession();
+		session.setAttribute("TempData", tempData);
+	}
+	
+	static public class Error {
 		private int errorCode = HttpServletResponse.SC_BAD_REQUEST;
 		private String errorMessage = "Something went wrong!";
 		
@@ -46,4 +61,6 @@ public class BaseServlet extends HttpServlet {
 			this.errorCode = errorCode;
 		}
 	}
+	
+	static public class TempData extends HashMap<String, Object> {}
 }

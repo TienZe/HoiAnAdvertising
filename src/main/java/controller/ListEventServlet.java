@@ -7,17 +7,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dto.PaginatedList;
-import model.bean.Accommodation;
-import model.bo.AccommodationBO;
+import model.bean.Event;
+import model.bo.EventBO;
 
-
-@WebServlet("/Accommodation")
-public class ListAccommodationAPIServlet extends BaseServlet {
+@WebServlet({ "/Admin/Event", "/Admin/Event/" })
+public class ListEventServlet extends BaseServlet {
 	private static final long serialVersionUID = 1L;
-	
-    private AccommodationBO accommodationBO = new AccommodationBO();
+    
+	private EventBO eventBO = new EventBO();
     private final int defaultPageSize = 6;
-	
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			int pageIndex = 1;
@@ -30,19 +29,31 @@ public class ListAccommodationAPIServlet extends BaseServlet {
 				pageSize = Integer.parseInt(request.getParameter("pageSize"));
 			}
 			
-			PaginatedList<Accommodation> paginatedList = null;
+			PaginatedList<Event> paginatedList = null;
 			
 			String searchKey = request.getParameter("searchKey");
 			if (searchKey == null || searchKey.isBlank()) {
-				paginatedList = accommodationBO.createPaginatedList(pageIndex, pageSize);	
+				paginatedList = eventBO.createPaginatedList(pageIndex, pageSize);	
 			} else {
-				paginatedList = accommodationBO.createPaginatedList(pageIndex, pageSize, searchKey);
+				paginatedList = eventBO.createPaginatedList(pageIndex, pageSize, searchKey);
+				request.setAttribute("searchKey", searchKey);
 			}
 			
-			returnJson(paginatedList, response);
+			request.setAttribute("paginatedList", paginatedList);
+			
+			// Additional data
+			String currentURL = request.getRequestURL().toString();
+		    String queryString = request.getQueryString();
+		   
+		    if (queryString != null) {
+		        currentURL += "?" + queryString;
+		    }
+		    request.setAttribute("currentURL", currentURL);
+			
+			returnView("/Admin/Event/index.jsp", request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
-			returnError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, e.getMessage(), response);
+			throw new ServletException(e);
 		}
 	}
 }

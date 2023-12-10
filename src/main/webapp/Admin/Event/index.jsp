@@ -1,3 +1,4 @@
+<%@page import="model.bean.Event"%>
 <%@page import="controller.BaseServlet.TempData"%>
 <%@page import="dto.AlertMessage"%>
 <%@page import="model.bean.Accommodation"%>
@@ -28,7 +29,7 @@
       <div class="col-3 bg-dark py-3 px-4"> <!-- Navigation bar-->
         <nav class="nav nav-pills flex-column row-gap-3">
           <p class="display-4 fw-medium text-center mb-5" style="color: #F9F9E0;">ADMIN</p>
-          <a class="nav-link text-white active d-flex justify-content-between align-items-center" 
+          <a class="nav-link text-white d-flex justify-content-between align-items-center" 
           		href="<%= request.getContextPath()%>/Admin/Accommodation">
             Accommodations
             <i class="fa-solid fa-hotel"></i>
@@ -38,7 +39,7 @@
             Restaurants
             <i class="fa-solid fa-utensils"></i>
           </a>
-          <a class="nav-link text-white d-flex justify-content-between align-items-center" 
+          <a class="nav-link text-white active d-flex justify-content-between align-items-center" 
           		href="<%= request.getContextPath()%>/Admin/Event">
             Events
             <i class="fa-solid fa-calendar"></i>
@@ -47,7 +48,7 @@
       </div> <!-- End navigation bar -->
   	
       <div class="col-9 bg-light px-4 d-flex flex-column"> <!-- Content -->
-      	<!-- Alert message -->
+      <!-- Alert message -->
 	   	<%
 	   		if (request.getAttribute("TempData") != null) {
 	   			TempData tempData = (TempData)request.getAttribute("TempData");
@@ -61,13 +62,14 @@
 	   	<%	
 	   		}
 	   	%>
+	   	<!-- End alert message -->
       	
       	
         <div class="w-75 mt-3"> <!-- Search input-->
 		  		<%
 		  			String searchKey = (request.getAttribute("searchKey") != null) ? (String)request.getAttribute("searchKey") : "";
 		  		%>
-          <form class="input-group mb-3" action="<%= request.getContextPath()%>/Admin">
+          <form class="input-group mb-3" action="<%= request.getContextPath()%>/Admin/Event">
             <input name="searchKey" type="text" class="form-control" placeholder="Enter something to search ..."
              value="<%= searchKey %>">
              	
@@ -77,45 +79,45 @@
 
         <div class="table-responsive mb-2">
           <table class="table table-striped caption-top">
-            <caption class="mb-2 fw-medium">List of accommodations</caption>
+            <caption class="mb-2 fw-medium">List of events</caption>
             <thead>
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
-                <th scope="col">Address</th>
+                <th scope="col">Timezone</th>
                 <th scope="col"></th>
               </tr>
             </thead>
 
             <tbody class="table-group-divider">
             <%
-              PaginatedList<Accommodation> paginatedList = (PaginatedList<Accommodation>)request.getAttribute("paginatedList");
+              PaginatedList<Event> paginatedList = (PaginatedList<Event>)request.getAttribute("paginatedList");
             	int rowIndex = paginatedList.getIndexOfFirstItem();
             	
-              for (Accommodation accommodation : paginatedList.getItems()) {
-            	  int accomID = accommodation.getId();
+              for (Event event : paginatedList.getItems()) {
+            	  int eventID = event.getId();
             %>
 	              <tr>
 	                <th scope="row"><%= rowIndex %></th>
-	                <td><%= accommodation.getName() %></td>
-	                <td><%= accommodation.getAddress() %></td>
+	                <td><%= event.getName() %></td>
+	                <td><%= event.getTimeZone() %></td>
 	
 	                <td class="text-center">
 	                  <div class="btn-group btn-group-sm" role="group">
 	                  	<!-- Form get details -->
-	                  	<form id="form-details-<%= accomID %>" action="<%= request.getContextPath() %>/Admin/Accommodation/Details"> 
-	                  		<input name="id" value="<%= accomID %>" hidden>
+	                  	<form id="form-details-<%= eventID %>" action="<%= request.getContextPath() %>/Admin/Event/Details"> 
+	                  		<input name="id" value="<%= eventID %>" hidden>
 	                  		<input name="returnUrl" value="<%= request.getAttribute("currentURL")%>" hidden>
 	                  	</form>
-	                    <button class="btn btn-info" type="submit" form="form-details-<%= accomID %>">
+	                    <button class="btn btn-info" type="submit" form="form-details-<%= eventID %>">
 	                    		Details
 	                    </button>
 											
 											<!-- Form delete -->
-	                    <form id="form-delete-<%= accomID %>" action="<%= request.getContextPath()%>/Admin/Accommodation/Delete" method="post">
-	                      <input name="id" value="<%= accomID %>" hidden>
+	                    <form id="form-delete-<%= eventID %>" action="index.html">
+	                      <input name="id" value="<%= eventID %>" hidden>
 	                    </form>
-	                    <button name="btn-delete" type="button" class="btn btn-danger" form="form-delete-<%= accomID %>"
+	                    <button name="btn-delete" type="button" class="btn btn-danger" form="form-delete-<%= eventID %>"
 	                      data-bs-toggle="modal" data-bs-target="#confirm-delete-modal">
 	                      Delete
 	                    </button>
@@ -156,13 +158,13 @@
         
         <%!
         	String getUrlToPage(int pageIndex, String searchKey) {
-        		return "/Admin?pageIndex=" + Integer.toString(pageIndex) 
+        		return "/Admin/Event?pageIndex=" + Integer.toString(pageIndex) 
         			+ (!searchKey.isBlank() ? "&searchKey=" + searchKey : "");
        	  }
         %>
         <div class="d-flex justify-content-between align-items-start">
-          <a class="btn btn-primary" href="<%= request.getContextPath()%>/Admin/Accommodation/Create" role="button">
-            Add new Accommodation
+          <a class="btn btn-primary" href="<%= request.getContextPath()%>/Admin/Event/Create" role="button">
+            Add new Event
           </a>
           
           <nav>
