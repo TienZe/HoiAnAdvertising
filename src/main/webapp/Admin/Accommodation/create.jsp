@@ -45,7 +45,7 @@
       </div> <!-- End navigation bar -->
   
       <div class="col-9 bg-light px-4 d-flex flex-column align-items-center"> <!-- Content -->
-        <a class="btn btn-sm btn-secondary align-self-start mt-3 px-4" href="index.html">
+        <a class="btn btn-sm btn-secondary align-self-start mt-3 px-4" href="<%= request.getContextPath()%>/Admin/Accommodation">
             <i class="fa fa-solid fa-left-long"></i>
         </a>
         
