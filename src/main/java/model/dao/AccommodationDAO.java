@@ -125,6 +125,18 @@ public class AccommodationDAO {
             return affectedRows == 1;
         }
 	}
+	
+	public boolean delete(int id) throws ClassNotFoundException, SQLException {
+		try (Connection connect = DbHelper.getConnection()) {
+            PreparedStatement statement = connect.prepareStatement(
+            		"DELETE FROM accommodations WHERE ID = ?");
+            		  
+            statement.setInt(1, id);
+            
+            int affectedRows = statement.executeUpdate();
+            return affectedRows == 1;
+        }
+	}
 
 	private ArrayList<Accommodation> convertResultSetToArray(ResultSet resultSet) throws SQLException {
 		var accommodations = new ArrayList<Accommodation>();

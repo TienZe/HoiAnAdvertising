@@ -41,4 +41,8 @@ public class AccommodationBO implements PaginatedBO<Accommodation> {
 	public boolean update(Accommodation accom) throws ClassNotFoundException, SQLException {
 		return accommodationDAO.update(accom);
 	}
+	
+	public boolean delete(int id) throws ClassNotFoundException, SQLException {
+		return accommodationDAO.delete(id);
+	}
 }

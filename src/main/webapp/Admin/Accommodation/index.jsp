@@ -112,7 +112,7 @@
 	                    </button>
 											
 											<!-- Form delete -->
-	                    <form id="form-delete-<%= accomID %>" action="index.html">
+	                    <form id="form-delete-<%= accomID %>" action="<%= request.getContextPath()%>/Admin/Accommodation/Delete" method="post">
 	                      <input name="id" value="<%= accomID %>" hidden>
 	                    </form>
 	                    <button name="btn-delete" type="button" class="btn btn-danger" form="form-delete-<%= accomID %>"
