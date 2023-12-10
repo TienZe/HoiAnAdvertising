@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dto.PaginatedList;
+import model.bean.Accommodation;
 import model.bo.AccommodationBO;
 
 
@@ -29,7 +30,15 @@ public class ListAccommodationAPIServlet extends BaseServlet {
 				pageSize = Integer.parseInt(request.getParameter("pageSize"));
 			}
 			
-			var paginatedList = accommodationBO.createPaginatedList(pageIndex, pageSize);
+			PaginatedList<Accommodation> paginatedList = null;
+			
+			String searchKey = request.getParameter("searchKey");
+			if (searchKey == null || searchKey.isBlank()) {
+				paginatedList = accommodationBO.createPaginatedList(pageIndex, pageSize);	
+			} else {
+				paginatedList = accommodationBO.createPaginatedList(pageIndex, pageSize, searchKey);
+			}
+			
 			returnJson(paginatedList, response);
 		} catch (Exception e) {
 			e.printStackTrace();

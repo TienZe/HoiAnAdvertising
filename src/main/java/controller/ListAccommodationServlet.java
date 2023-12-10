@@ -36,7 +36,6 @@ public class ListAccommodationServlet extends BaseServlet {
 				paginatedList = accommodationBO.createPaginatedList(pageIndex, pageSize);	
 			} else {
 				paginatedList = accommodationBO.createPaginatedList(pageIndex, pageSize, searchKey);
-				
 				request.setAttribute("searchKey", searchKey);
 			}
 			
