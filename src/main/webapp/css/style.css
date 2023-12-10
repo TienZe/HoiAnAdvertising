@@ -6,10 +6,7 @@ body {
   font-size: 1rem;
   background: #fff;
   background: #f5eedc;
-<<<<<<< HEAD
-=======
   overflow-x: hidden;
->>>>>>> other/main
 }
 
 html {
@@ -21,22 +18,17 @@ html {
   font-weight: 300;
 }
 
-<<<<<<< HEAD
-=======
 .content-justify {
   margin-top: 2rem;
   align-items: center;
 }
 
->>>>>>> other/main
 .para-display {
   max-width: 80%;
   align-items: center;
   justify-items: center;
 }
 
-<<<<<<< HEAD
-=======
 .form-select-outline {
   border: 2px solid #ffffff;
   background-color: black;
@@ -94,7 +86,6 @@ html {
   margin: 5px;
 }
 
->>>>>>> other/main
 .fade-half-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,11 +98,7 @@ html {
   float : right;
   background: rgba(0, 0, 0, 0.0);
   filter: 2px;
-<<<<<<< HEAD
-}
-=======
 }   
->>>>>>> other/main
 
 ::-moz-selection {
   background: #000;
@@ -237,27 +224,6 @@ h5,
 
 .form-control {
   border: none;
-<<<<<<< HEAD
-  height: 55px;
-  color: #000;
-  background: rgba(191, 146, 112, 0.3);
-}
-.form-control:active,
-.form-control:focus {
-  color: #000;
-  background: rgba(191, 146, 112, 0.3);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  outline: none;
-}
-
-.site-section {
-  padding: 2.5em 0;
-}
-@media (min-width: 768px) {
-  .site-section {
-    padding: 5em 0;
-=======
   height: 45px;
   color: #ffffff;
   border: 2px solid white;
@@ -280,7 +246,6 @@ h5,
 @media (min-width: 768px) {
   .site-section {
     padding-top: 7em;
->>>>>>> other/main
   }
 }
 .site-section.site-section-sm {
@@ -1259,11 +1224,7 @@ h5,
 }
 
 .site-section {
-<<<<<<< HEAD
-  padding: 7em 0;
-=======
   padding-top: 7em;
->>>>>>> other/main
 }
 .site-section.darken-bg {
   background: #1a1a1a;
@@ -1413,8 +1374,6 @@ h5,
   opacity: 10;
   visibility: visible;
 }
-<<<<<<< HEAD
-=======
 
 *::-webkit-scrollbar {
   height: 4px;
@@ -1445,4 +1404,3 @@ h5,
 *::-webkit-scrollbar-thumb:active {
   background-color: #FFFFFF;
 }
->>>>>>> other/main
