@@ -81,8 +81,16 @@
 	
 	                <td class="text-center">
 	                  <div class="btn-group btn-group-sm" role="group">
-	                    <a class="btn btn-info" href="details.html?id=<%= accomID %>">Details</a>
-	
+	                  	<!-- Form get details -->
+	                  	<form id="form-details-<%= accomID %>" action="<%= request.getContextPath() %>/Admin/Accommodation/Details"> 
+	                  		<input name="id" value="<%= accomID %>" hidden>
+	                  		<input name="returnUrl" value="<%= request.getAttribute("currentURL")%>" hidden>
+	                  	</form>
+	                    <button class="btn btn-info" type="submit" form="form-details-<%= accomID %>">
+	                    		Details
+	                    </button>
+											
+											<!-- Form delete -->
 	                    <form id="form-delete-<%= accomID %>" action="index.html">
 	                      <input name="id" value="<%= accomID %>" hidden>
 	                    </form>

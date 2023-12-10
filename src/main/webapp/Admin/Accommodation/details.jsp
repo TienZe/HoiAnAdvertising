@@ -1,3 +1,7 @@
+<%@page import="model.bean.Accommodation"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,45 +43,48 @@
       </div> <!-- End navigation bar -->
   
       <div class="col-9 bg-light px-4 d-flex flex-column align-items-center"> <!-- Content -->
-        <a class="btn btn-sm btn-secondary align-self-start mt-3 px-4" href="index.html">
+        <a class="btn btn-sm btn-secondary align-self-start mt-3 px-4" href="<%= request.getParameter("returnUrl") %>">
             <i class="fa fa-solid fa-left-long"></i>
         </a>
         
-        <form style="width: 60%" class="mx-auto my-4" method="post" action=""> <!-- Create form-->
+        <%
+        	Accommodation accom = (Accommodation)request.getAttribute("accommodation");
+        %>
+        <form style="width: 60%" class="mx-auto my-4" method="post" action=""> <!-- Update form-->
           <p class="display-6 text-center mb-5">Details</p>
 
           <div class="row mb-3">
             <label for="name" class="col-form-label col-2">Name</label>
             <div class="col-10">
-              <input type="text" class="form-control" id="name" name="name">
+              <input type="text" class="form-control" id="name" name="name" value="<%= accom.getName()%>">
             </div>
           </div>
 
           <div class="row mb-3">
             <label for="contact" class="col-form-label col-2">Contact</label>
             <div class="col-10">
-              <input type="text" class="form-control" id="contact" name="contact">
+              <input type="text" class="form-control" id="contact" name="contact" value="<%= accom.getContact()%>">
             </div>
           </div>
 
           <div class="row mb-3">
             <label for="owner" class="col-form-label col-2">Owner</label>
             <div class="col-10">
-              <input type="text" class="form-control" id="owner" name="owner">
+              <input type="text" class="form-control" id="owner" name="owner" value="<%= accom.getOwner()%>">
             </div>
           </div>
 
           <div class="row mb-3">
             <label for="address" class="col-form-label col-2">Address</label>
             <div class="col-10">
-              <textarea class="form-control" id="address" name="address" rows="2"></textarea>
+              <textarea class="form-control" id="address" name="address" rows="2"><%= accom.getAddress()%></textarea>
             </div>
           </div>
 
           <div class="row mb-3">
             <label for="website" class="col-form-label col-2">Website</label>
             <div class="col-10">
-              <textarea class="form-control" id="website" name="website" rows="2"></textarea>
+              <textarea class="form-control" id="website" name="website" rows="2"><%= accom.getWebsite()%></textarea>
             </div>
           </div>
          

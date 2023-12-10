@@ -70,6 +70,25 @@ public class AccommodationDAO {
             return numberOfRecords;
         }
 	}
+	
+	// Get accom by id, if does not exist then return null
+	public Accommodation getByID(int id) throws ClassNotFoundException, SQLException {
+		try (Connection connect = DbHelper.getConnection()) {
+            PreparedStatement statement = connect.prepareStatement(
+            		   "SELECT * "
+                     + "FROM accommodations "
+                     + "WHERE ID = ?;");
+
+            statement.setInt(1, id);
+            ResultSet resultSet = statement.executeQuery();
+           
+            var accomArray = convertResultSetToArray(resultSet);
+            if (accomArray.isEmpty()) {
+            	return null;
+            }
+            return accomArray.getFirst();
+        }
+	}
 
 	private ArrayList<Accommodation> convertResultSetToArray(ResultSet resultSet) throws SQLException {
 		var accommodations = new ArrayList<Accommodation>();

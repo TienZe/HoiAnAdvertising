@@ -42,6 +42,15 @@ public class ListAccommodationServlet extends BaseServlet {
 			
 			request.setAttribute("paginatedList", paginatedList);
 			
+			// Additional data
+			String currentURL = request.getRequestURL().toString();
+		    String queryString = request.getQueryString();
+		   
+		    if (queryString != null) {
+		        currentURL += "?" + queryString;
+		    }
+		    request.setAttribute("currentURL", currentURL);
+			
 			returnView("/Admin/Accommodation/index.jsp", request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
