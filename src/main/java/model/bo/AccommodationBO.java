@@ -34,4 +34,8 @@ public class AccommodationBO implements PaginatedBO<Accommodation> {
 		return accommodationDAO.getByID(id);
 	}
 	
+	public boolean add(Accommodation accom) throws ClassNotFoundException, SQLException {
+		return accommodationDAO.add(accom);
+	}
+	
 }

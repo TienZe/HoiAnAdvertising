@@ -20,6 +20,10 @@ public class Accommodation {
         this.address = address;
         this.website = website;
     }
+    
+    public Accommodation(String name, String contact, String owner, String address, String website) {
+        this(0, name, contact, owner, address, website);
+    }
 
     public int getId() {
         return id;

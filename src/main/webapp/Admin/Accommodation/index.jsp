@@ -1,3 +1,5 @@
+<%@page import="controller.BaseServlet.TempData"%>
+<%@page import="dto.AlertMessage"%>
 <%@page import="model.bean.Accommodation"%>
 <%@page import="dto.PaginatedList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -26,11 +28,13 @@
       <div class="col-3 bg-dark py-3 px-4"> <!-- Navigation bar-->
         <nav class="nav nav-pills flex-column row-gap-3">
           <p class="display-4 fw-medium text-center mb-5" style="color: #F9F9E0;">ADMIN</p>
-          <a class="nav-link text-white active d-flex justify-content-between align-items-center" href="#">
+          <a class="nav-link text-white active d-flex justify-content-between align-items-center" 
+          		href="<%= request.getContextPath()%>/Admin/Accommodation">
             Accommodations
             <i class="fa-solid fa-hotel"></i>
           </a>
-          <a class="nav-link text-white d-flex justify-content-between align-items-center" href="#">
+          <a class="nav-link text-white d-flex justify-content-between align-items-center" 
+          		href="<%= request.getContextPath()%>/Admin/Restaurant">
             Restaurants
             <i class="fa-solid fa-utensils"></i>
           </a>
@@ -41,17 +45,33 @@
         </nav>
       </div> <!-- End navigation bar -->
   	
-  		<%
-  			String searchKey = (request.getAttribute("searchKey") != null) ? (String)request.getAttribute("searchKey") : "";
-  		%>
       <div class="col-9 bg-light px-4 d-flex flex-column"> <!-- Content -->
-        <div class="w-75 mt-4"> <!-- Search input-->
-            <form class="input-group mb-3" action="<%= request.getContextPath()%>/Admin">
-              <input name="searchKey" type="text" class="form-control" placeholder="Enter something to search ..."
-              	value="<%= searchKey %>">
-              	
-              <button class="btn btn-primary" type="submit">Search</button>
-            </form>
+      	<!-- Alert message -->
+	   	<%
+	   		if (request.getAttribute("TempData") != null) {
+	   			TempData tempData = (TempData)request.getAttribute("TempData");
+	   			
+	   			AlertMessage alertMessage = (AlertMessage)tempData.get("alertMessage");
+	   	%>
+	     		<div class="alert alert-<%= alertMessage.getType()%> alert-dismissible fade show mt-3">
+	          <%= alertMessage.getMessage()%>
+	          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+	        </div>
+	   	<%	
+	   		}
+	   	%>
+      	
+      	
+        <div class="w-75 mt-3"> <!-- Search input-->
+		  		<%
+		  			String searchKey = (request.getAttribute("searchKey") != null) ? (String)request.getAttribute("searchKey") : "";
+		  		%>
+          <form class="input-group mb-3" action="<%= request.getContextPath()%>/Admin">
+            <input name="searchKey" type="text" class="form-control" placeholder="Enter something to search ..."
+             value="<%= searchKey %>">
+             	
+            <button class="btn btn-primary" type="submit">Search</button>
+          </form>
         </div>
 
         <div class="table-responsive mb-2">
@@ -140,7 +160,7 @@
        	  }
         %>
         <div class="d-flex justify-content-between align-items-start">
-          <a class="btn btn-primary" href="/create.html" role="button">
+          <a class="btn btn-primary" href="<%= request.getContextPath()%>/Admin/Accommodation/Create" role="button">
             Add new Accommodation
           </a>
           

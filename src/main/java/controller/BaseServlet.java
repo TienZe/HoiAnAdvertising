@@ -9,13 +9,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 
-import controller.BaseServlet.Error;
-
 public class BaseServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	
 	protected void returnView(String pathToView, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.getRequestDispatcher(pathToView).forward(request, response);
+	}
+	
+	protected void redirecTo(String relativePathFromProject, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		response.sendRedirect(request.getContextPath() + "/" + relativePathFromProject);
+	}
+	
+	// Redirect with TempData
+	protected void redirectTo(String relativePathFromProject, TempData tempData, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		storeTempData(request, tempData);
+		response.sendRedirect(request.getContextPath() + "/" + relativePathFromProject);
 	}
 	
 	protected void returnJson(Object result, HttpServletResponse response) throws IOException {

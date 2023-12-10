@@ -27,11 +27,13 @@
       <div class="col-3 bg-dark py-3 px-4"> <!-- Navigation bar-->
         <nav class="nav nav-pills flex-column row-gap-3">
           <p class="display-4 text-warning fw-medium text-center mb-5">ADMIN</p>
-          <a class="nav-link text-white active d-flex justify-content-between align-items-center" href="#">
+          <a class="nav-link text-white active d-flex justify-content-between align-items-center" 
+          		href="<%= request.getContextPath()%>/Admin/Accommodation">
             Accommodations
             <i class="fa-solid fa-hotel"></i>
           </a>
-          <a class="nav-link text-white d-flex justify-content-between align-items-center" href="#">
+          <a class="nav-link text-white d-flex justify-content-between align-items-center" 
+          	href="<%= request.getContextPath()%>/Admin/Restaurant">
             Restaurants
             <i class="fa-solid fa-utensils"></i>
           </a>
