@@ -34,12 +34,16 @@ public class EventBO implements PaginatedBO<Event> {
 	public Event getById(int id) throws ClassNotFoundException, SQLException {
 		return eventDAO.getByID(id);
 	}
-//	
-//	public boolean add(Accommodation accom) throws ClassNotFoundException, SQLException {
-//		return accommodationDAO.add(accom);
-//	}
-//	
+	
+	public boolean add(Event event) throws ClassNotFoundException, SQLException {
+		return eventDAO.add(event);
+	}
+	
 	public boolean update(Event event) throws ClassNotFoundException, SQLException {
 		return eventDAO.update(event);
+	}
+	
+	public boolean delete(int id) throws ClassNotFoundException, SQLException {
+		return eventDAO.delete(id);
 	}
 }

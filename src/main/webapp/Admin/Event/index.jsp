@@ -114,7 +114,7 @@
 	                    </button>
 											
 											<!-- Form delete -->
-	                    <form id="form-delete-<%= eventID %>" action="index.html">
+	                    <form id="form-delete-<%= eventID %>" action="<%= request.getContextPath()%>/Admin/Event/Delete" method="post">
 	                      <input name="id" value="<%= eventID %>" hidden>
 	                    </form>
 	                    <button name="btn-delete" type="button" class="btn btn-danger" form="form-delete-<%= eventID %>"

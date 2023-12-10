@@ -92,24 +92,22 @@ public class EventDAO {
             return accomArray.getFirst();
         }
 	}
-//	
-//	public boolean add(Accommodation accom) throws ClassNotFoundException, SQLException {
-//		try (Connection connect = DbHelper.getConnection()) {
-//            PreparedStatement statement = connect.prepareStatement(
-//            		  "INSERT INTO accommodations (Name, Contact, Owner, Address, Website) "
-//            		+ "VALUES (?, ?, ?, ?, ?);" );
-//            		  
-//            statement.setString(1, accom.getName());
-//            statement.setString(2, accom.getContact());
-//            statement.setString(3, accom.getOwner());
-//            statement.setString(4, accom.getAddress());
-//            statement.setString(5, accom.getWebsite());
-//            
-//            int affectedRows = statement.executeUpdate();
-//            return affectedRows == 1;
-//        }
-//	}
-//	
+	
+	public boolean add(Event event) throws ClassNotFoundException, SQLException {
+		try (Connection connect = DbHelper.getConnection()) {
+            PreparedStatement statement = connect.prepareStatement(
+            		  "INSERT INTO events (Name, Timezone, Location) "
+            		+ "VALUES (?, ?, ?);" );
+            		  
+            statement.setString(1, event.getName());
+            statement.setString(2, event.getTimeZone());
+            statement.setString(3, event.getLocation());
+            
+            int affectedRows = statement.executeUpdate();
+            return affectedRows == 1;
+        }
+	}
+	
 	public boolean update(Event event) throws ClassNotFoundException, SQLException {
 		try (Connection connect = DbHelper.getConnection()) {
             PreparedStatement statement = connect.prepareStatement(
@@ -126,7 +124,19 @@ public class EventDAO {
             return affectedRows == 1;
         }
 	}
-
+	
+	public boolean delete(int id) throws ClassNotFoundException, SQLException {
+		try (Connection connect = DbHelper.getConnection()) {
+            PreparedStatement statement = connect.prepareStatement(
+            		"DELETE FROM events WHERE ID = ?");
+            		  
+            statement.setInt(1, id);
+            
+            int affectedRows = statement.executeUpdate();
+            return affectedRows == 1;
+        }
+	}
+	
 	private ArrayList<Event> convertResultSetToArray(ResultSet resultSet) throws SQLException {
 		var events = new ArrayList<Event>();
 		
