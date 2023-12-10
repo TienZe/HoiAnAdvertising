@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.util.HashMap;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,7 +35,12 @@ public class BaseServlet extends HttpServlet {
 		returnJson(new Error(errorCode, errorMessage), response);
 	}
 	
-	static class Error {
+	protected void storeTempData(HttpServletRequest request, TempData tempData) {
+		var session = request.getSession();
+		session.setAttribute("TempData", tempData);
+	}
+	
+	static public class Error {
 		private int errorCode = HttpServletResponse.SC_BAD_REQUEST;
 		private String errorMessage = "Something went wrong!";
 		
@@ -46,4 +53,6 @@ public class BaseServlet extends HttpServlet {
 			this.errorCode = errorCode;
 		}
 	}
+	
+	static public class TempData extends HashMap<String, Object> {}
 }
