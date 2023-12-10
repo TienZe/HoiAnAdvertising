@@ -12,15 +12,17 @@ public class PaginatedList<T> {
 	private int totalPages;
 	private int pageSize;
 	private int indexOfFirstItem;
+	private int totalItems;
 	
 	private ArrayList<T> items;
     
-    public PaginatedList(ArrayList<T> items, int pageIndex, int pageSize, int totalPages) {
+    public PaginatedList(ArrayList<T> items, int pageIndex, int pageSize, int totalPages, int totalItems) {
     	this.items = items;
     	
     	this.pageIndex = pageIndex;
     	this.totalPages = totalPages;
     	this.pageSize = pageSize;
+    	this.totalItems = totalItems;
     	
     	this.indexOfFirstItem = (pageIndex - 1) * pageSize + 1;
     }

@@ -29,7 +29,7 @@ public interface PaginatedBO<T> { // BO có khả năng phân trang
     	int count = count();
     	int totalPages = Math.ceilDiv(count, pageSize);
     	
-    	return new PaginatedList<T>(items, pageIndex, pageSize, totalPages);
+    	return new PaginatedList<T>(items, pageIndex, pageSize, totalPages, count);
     }
 	
 	// Phân trang phiên bản có filter bởi "searchKey"
@@ -42,6 +42,6 @@ public interface PaginatedBO<T> { // BO có khả năng phân trang
     	int count = count(searchKey);
     	int totalPages = Math.ceilDiv(count, pageSize);
     	
-    	return new PaginatedList<T>(items, pageIndex, pageSize, totalPages);
+    	return new PaginatedList<T>(items, pageIndex, pageSize, totalPages, count);
     }
 }
