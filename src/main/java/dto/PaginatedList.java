@@ -25,15 +25,6 @@ public class PaginatedList<T> {
     	this.indexOfFirstItem = (pageIndex - 1) * pageSize + 1;
     }
     
-    public static <T> PaginatedList<T> create(PaginatedBO<T> paginatedBO, int pageIndex, int pageSize) throws ClassNotFoundException, SQLException {
-    	var items = paginatedBO.getPage(pageIndex, pageSize);
-    	
-    	int count = paginatedBO.count();
-    	int totalPages = Math.ceilDiv(count, pageSize);
-    	
-    	return new PaginatedList<T>(items, pageIndex, pageSize, totalPages);
-    }
-    
     // Getter
     public int getPageIndex() {
         return pageIndex;
@@ -49,5 +40,9 @@ public class PaginatedList<T> {
 
     public ArrayList<T> getItems() {
         return items;
+    }
+    
+    public int getIndexOfFirstItem() {
+    	return indexOfFirstItem;
     }
 }

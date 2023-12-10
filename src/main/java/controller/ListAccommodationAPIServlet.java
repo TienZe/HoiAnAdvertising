@@ -15,7 +15,7 @@ public class ListAccommodationAPIServlet extends BaseServlet {
 	private static final long serialVersionUID = 1L;
 	
     private AccommodationBO accommodationBO = new AccommodationBO();
-    private final int defaultPageSize = 7;
+    private final int defaultPageSize = 6;
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
@@ -29,7 +29,7 @@ public class ListAccommodationAPIServlet extends BaseServlet {
 				pageSize = Integer.parseInt(request.getParameter("pageSize"));
 			}
 			
-			var paginatedList = PaginatedList.create(accommodationBO, pageIndex, pageSize);
+			var paginatedList = accommodationBO.createPaginatedList(pageIndex, pageSize);
 			returnJson(paginatedList, response);
 		} catch (Exception e) {
 			e.printStackTrace();

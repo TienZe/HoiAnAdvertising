@@ -22,6 +22,24 @@ public class AccommodationDAO {
         }
 	}
 	
+	// Select accom, lọc theo Name và Address
+	public ArrayList<Accommodation> getInRange(int offset, int size, String searchKey) throws SQLException, ClassNotFoundException {
+		try (Connection connect = DbHelper.getConnection()) {
+            PreparedStatement statement = connect.prepareStatement(
+            		"SELECT * FROM accommodations "
+            	  + "WHERE Name LIKE ? OR Address LIKE ? "
+            	  + "LIMIT ?, ?;");
+            statement.setString(1, "%" + searchKey + "%");
+            statement.setString(2, "%" + searchKey + "%");
+            statement.setInt(3, offset);
+            statement.setInt(4, size);
+            
+            ResultSet resultSet = statement.executeQuery();
+
+            return convertResultSetToArray(resultSet);
+        }
+	}
+	
 	public int count() throws SQLException, ClassNotFoundException {
 		try (Connection connect = DbHelper.getConnection()) {
             Statement statement = connect.createStatement();
@@ -34,6 +52,24 @@ public class AccommodationDAO {
         }
 	}
 	
+	public int count(String filter) throws SQLException, ClassNotFoundException {
+		try (Connection connect = DbHelper.getConnection()) {
+            PreparedStatement statement = connect.prepareStatement(
+            		   "SELECT COUNT(ID) "
+                     + "FROM accommodations "
+                     + "WHERE Name LIKE ? OR Address LIKE ?;");
+
+            statement.setString(1, "%" + filter + "%");
+            statement.setString(2, "%" + filter + "%");
+            
+            ResultSet resultSet = statement.executeQuery();
+           
+            resultSet.first();
+            
+            int numberOfRecords = resultSet.getInt(1);
+            return numberOfRecords;
+        }
+	}
 
 	private ArrayList<Accommodation> convertResultSetToArray(ResultSet resultSet) throws SQLException {
 		var accommodations = new ArrayList<Accommodation>();

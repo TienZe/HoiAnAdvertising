@@ -1,3 +1,8 @@
+<%@page import="model.bean.Accommodation"%>
+<%@page import="dto.PaginatedList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,12 +40,17 @@
           </a>
         </nav>
       </div> <!-- End navigation bar -->
-  
+  	
+  		<%
+  			String searchKey = (request.getAttribute("searchKey") != null) ? (String)request.getAttribute("searchKey") : "";
+  		%>
       <div class="col-9 bg-light px-4 d-flex flex-column"> <!-- Content -->
-        <div style="width: 60%" class="mt-4"> <!-- Search input-->
-            <form class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Enter something to search ...">
-              <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
+        <div class="w-75 mt-4"> <!-- Search input-->
+            <form class="input-group mb-3" action="<%= request.getContextPath()%>/Admin">
+              <input name="searchKey" type="text" class="form-control" placeholder="Enter something to search ..."
+              	value="<%= searchKey %>">
+              	
+              <button class="btn btn-primary" type="submit">Search</button>
             </form>
         </div>
 
@@ -51,81 +61,76 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
-                <th scope="col">Contact</th>
-                <th scope="col">Owner</th>
+                <th scope="col">Address</th>
                 <th scope="col"></th>
               </tr>
             </thead>
 
             <tbody class="table-group-divider">
-              <tr>
-                <th scope="row">1</th>
-                <td>Phượng Vĩ Homestay</td>
-                <td>090 576 26</td>
-                <td>Tracy Nguyen</td>
+            <%
+              PaginatedList<Accommodation> paginatedList = (PaginatedList<Accommodation>)request.getAttribute("paginatedList");
+            	int rowIndex = paginatedList.getIndexOfFirstItem();
+            	
+              for (Accommodation accommodation : paginatedList.getItems()) {
+            	  int accomID = accommodation.getId();
+            %>
+	              <tr>
+	                <th scope="row"><%= rowIndex %></th>
+	                <td><%= accommodation.getName() %></td>
+	                <td><%= accommodation.getAddress() %></td>
+	
+	                <td class="text-center">
+	                  <div class="btn-group btn-group-sm" role="group">
+	                    <a class="btn btn-info" href="details.html?id=<%= accomID %>">Details</a>
+	
+	                    <form id="form-delete-<%= accomID %>" action="index.html">
+	                      <input name="id" value="<%= accomID %>" hidden>
+	                    </form>
+	                    <button name="btn-delete" type="button" class="btn btn-danger" form="form-delete-<%= accomID %>"
+	                      data-bs-toggle="modal" data-bs-target="#confirm-delete-modal">
+	                      Delete
+	                    </button>
+	                  </div>
+	                </td>
+	              </tr>
+						<%
+								++rowIndex;
+							} 
+						%>
 
-                <td class="text-center">
-                  <div class="btn-group btn-group-sm" role="group">
-                    <a class="btn btn-info" href="details.html">Details</a>
-
-                    <form id="form-delete-1" action="index.html">
-                      <input name="id" value="1" hidden>
-                    </form>
-                    <button name="btn-delete" type="button" class="btn btn-danger" form="form-delete-1"
-                      data-bs-toggle="modal" data-bs-target="#confirm-delete-modal">
-                      Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
-
-
-              <tr>
-                <th scope="row">2</th>
-                <td>Phượng Vĩ Homestay</td>
-                <td>090 576 26</td>
-                <td>Tracy Nguyen</td>
-
-                <td class="text-center">
-                  <div class="btn-group btn-group-sm" role="group">
-                    <a class="btn btn-info" href="details.html">Details</a>
-
-                    <form id="form-delete-2" action="index.html">
-                      <input name="id" value="2" hidden>
-                    </form>
-                    <button name="btn-delete" type="button" class="btn btn-danger" form="form-delete-2"
-                      data-bs-toggle="modal" data-bs-target="#confirm-delete-modal">
-                      Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Phượng Vĩ Homestay</td>
-                <td>090 576 26</td>
-                <td>Tracy Nguyen</td>
-
-                <td class="text-center">
-                  <div class="btn-group btn-group-sm" role="group">
-                    <a class="btn btn-info" href="details.html">Details</a>
-
-                    <form id="form-delete-3" action="index.html">
-                      <input name="id" value="3" hidden>
-                    </form>
-                    <button name="btn-delete" type="button" class="btn btn-danger" form="form-delete-3"
-                      data-bs-toggle="modal" data-bs-target="#confirm-delete-modal">
-                      Delete
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              
             </tbody>
           </table>
         </div>
 
         <!-- Pagination -->
+        <%
+        	int totalPages = paginatedList.getTotalPages();
+        	int activePage = paginatedList.getPageIndex();
+        	
+        	int startIndex = Math.max(activePage - 1, 1);
+        	int endIndex = Math.min(activePage + 1, totalPages);
+        	
+        	// Check corner case
+        	if (totalPages >= 3) {
+        		if (activePage == 1) {
+        			startIndex = 1;
+        			endIndex = 3;
+        		}
+        		
+        		if (activePage == totalPages) {
+        			startIndex = totalPages - 2;
+        			endIndex = totalPages;
+        		}
+        	}
+        	
+        %>
+        
+        <%!
+        	String getUrlToPage(int pageIndex, String searchKey) {
+        		return "/Admin?pageIndex=" + Integer.toString(pageIndex) 
+        			+ (!searchKey.isBlank() ? "&searchKey=" + searchKey : "");
+       	  }
+        %>
         <div class="d-flex justify-content-between align-items-start">
           <a class="btn btn-primary" href="/create.html" role="button">
             Add new Accommodation
@@ -133,16 +138,27 @@
           
           <nav>
             <ul class="pagination pagination-sm justify-content-end">
-              <li class="page-item disabled">
-                <a class="page-link">Previous</a>
+              <li class="page-item <%= (activePage == 1 ? "disabled" : "") %>">
+                <a class="page-link" href="<%= request.getContextPath() + getUrlToPage(Math.max(activePage - 1, 1), searchKey)%>">
+                	Previous
+                </a>
               </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item active" aria-current="page">
-                <a class="page-link" href="#">2</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
+            <%
+            	for (int i = startIndex; i <= endIndex; ++i) {
+            %>
+            		<li class="page-item <%= (i == activePage ? "active" : "") %>">
+                	<a class="page-link" href="<%= request.getContextPath() + getUrlToPage(i, searchKey)%>">
+                		<%= i %>
+                	</a>
+              	</li>
+            <%
+            	}
+            %>
+              
+             <li class="page-item <%= (activePage == totalPages ? "disabled" : "") %>">
+                <a class="page-link" href="<%= request.getContextPath() + getUrlToPage(Math.min(activePage + 1, totalPages), searchKey)%>">
+                	Next
+                </a>
               </li>
             </ul>
           </nav>
