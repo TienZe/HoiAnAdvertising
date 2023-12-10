@@ -1,7 +1,7 @@
 package model.bean;
 
 public class Event {
-    private int slotLine;
+    private int id;
     private String name;
     private String timeZone;
     private String location;
@@ -10,19 +10,23 @@ public class Event {
         // Default constructor
     }
 
-    public Event(int slotLine, String name, String timeZone, String location) {
-        this.slotLine = slotLine;
+    public Event(int id, String name, String timeZone, String location) {
+        this.id = id;
         this.name = name;
         this.timeZone = timeZone;
         this.location = location;
     }
-
-    public int getSlotLine() {
-        return slotLine;
+    
+    public Event(String name, String timeZone, String location) {
+        this(0, name, timeZone, location);
     }
 
-    public void setSlotLine(int slotLine) {
-        this.slotLine = slotLine;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
