@@ -74,61 +74,69 @@ public class EventDAO {
         }
 	}
 	
-	// Get accom by id, if does not exist then return null
-//	public Accommodation getByID(int id) throws ClassNotFoundException, SQLException {
-//		try (Connection connect = DbHelper.getConnection()) {
-//            PreparedStatement statement = connect.prepareStatement(
-//            		   "SELECT * "
-//                     + "FROM accommodations "
-//                     + "WHERE ID = ?;");
-//
-//            statement.setInt(1, id);
-//            ResultSet resultSet = statement.executeQuery();
-//           
-//            var accomArray = convertResultSetToArray(resultSet);
-//            if (accomArray.isEmpty()) {
-//            	return null;
-//            }
-//            return accomArray.getFirst();
-//        }
-//	}
-//	
-//	public boolean add(Accommodation accom) throws ClassNotFoundException, SQLException {
-//		try (Connection connect = DbHelper.getConnection()) {
-//            PreparedStatement statement = connect.prepareStatement(
-//            		  "INSERT INTO accommodations (Name, Contact, Owner, Address, Website) "
-//            		+ "VALUES (?, ?, ?, ?, ?);" );
-//            		  
-//            statement.setString(1, accom.getName());
-//            statement.setString(2, accom.getContact());
-//            statement.setString(3, accom.getOwner());
-//            statement.setString(4, accom.getAddress());
-//            statement.setString(5, accom.getWebsite());
-//            
-//            int affectedRows = statement.executeUpdate();
-//            return affectedRows == 1;
-//        }
-//	}
-//	
-//	public boolean update(Accommodation accom) throws ClassNotFoundException, SQLException {
-//		try (Connection connect = DbHelper.getConnection()) {
-//            PreparedStatement statement = connect.prepareStatement(
-//            		  "UPDATE accommodations "
-//            		+ "SET Name = ?, Contact = ?, Owner = ?, Address = ?, Website = ? "
-//            		+ "WHERE ID = ?;");
-//            		  
-//            statement.setString(1, accom.getName());
-//            statement.setString(2, accom.getContact());
-//            statement.setString(3, accom.getOwner());
-//            statement.setString(4, accom.getAddress());
-//            statement.setString(5, accom.getWebsite());
-//            statement.setInt(6, accom.getId());
-//            
-//            int affectedRows = statement.executeUpdate();
-//            return affectedRows == 1;
-//        }
-//	}
+	// Get event by id, if does not exist then return null
+	public Event getByID(int id) throws ClassNotFoundException, SQLException {
+		try (Connection connect = DbHelper.getConnection()) {
+            PreparedStatement statement = connect.prepareStatement(
+            		   "SELECT * "
+                     + "FROM events "
+                     + "WHERE ID = ?;");
 
+            statement.setInt(1, id);
+            ResultSet resultSet = statement.executeQuery();
+           
+            var accomArray = convertResultSetToArray(resultSet);
+            if (accomArray.isEmpty()) {
+            	return null;
+            }
+            return accomArray.getFirst();
+        }
+	}
+	
+	public boolean add(Event event) throws ClassNotFoundException, SQLException {
+		try (Connection connect = DbHelper.getConnection()) {
+            PreparedStatement statement = connect.prepareStatement(
+            		  "INSERT INTO events (Name, Timezone, Location) "
+            		+ "VALUES (?, ?, ?);" );
+            		  
+            statement.setString(1, event.getName());
+            statement.setString(2, event.getTimeZone());
+            statement.setString(3, event.getLocation());
+            
+            int affectedRows = statement.executeUpdate();
+            return affectedRows == 1;
+        }
+	}
+	
+	public boolean update(Event event) throws ClassNotFoundException, SQLException {
+		try (Connection connect = DbHelper.getConnection()) {
+            PreparedStatement statement = connect.prepareStatement(
+            		  "UPDATE events "
+            		+ "SET Name = ?, Timezone = ?, Location = ? "
+            		+ "WHERE ID = ?;");
+            		  
+            statement.setString(1, event.getName());
+            statement.setString(2, event.getTimeZone());
+            statement.setString(3, event.getLocation());
+            statement.setInt(4, event.getId());
+            
+            int affectedRows = statement.executeUpdate();
+            return affectedRows == 1;
+        }
+	}
+	
+	public boolean delete(int id) throws ClassNotFoundException, SQLException {
+		try (Connection connect = DbHelper.getConnection()) {
+            PreparedStatement statement = connect.prepareStatement(
+            		"DELETE FROM events WHERE ID = ?");
+            		  
+            statement.setInt(1, id);
+            
+            int affectedRows = statement.executeUpdate();
+            return affectedRows == 1;
+        }
+	}
+	
 	private ArrayList<Event> convertResultSetToArray(ResultSet resultSet) throws SQLException {
 		var events = new ArrayList<Event>();
 		

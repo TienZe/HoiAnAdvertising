@@ -27,7 +27,7 @@
       <div class="col-3 bg-dark py-3 px-4"> <!-- Navigation bar-->
         <nav class="nav nav-pills flex-column row-gap-3">
           <p class="display-4 text-warning fw-medium text-center mb-5">ADMIN</p>
-          <a class="nav-link text-white active d-flex justify-content-between align-items-center" 
+          <a class="nav-link text-white d-flex justify-content-between align-items-center" 
           		href="<%= request.getContextPath()%>/Admin/Accommodation">
             Accommodations
             <i class="fa-solid fa-hotel"></i>
@@ -37,7 +37,7 @@
             Restaurants
             <i class="fa-solid fa-utensils"></i>
           </a>
-          <a class="nav-link text-white d-flex justify-content-between align-items-center" href="#">
+          <a class="nav-link text-white active d-flex justify-content-between align-items-center" href="#">
             Events
             <i class="fa-solid fa-calendar"></i>
           </a>
@@ -45,69 +45,48 @@
       </div> <!-- End navigation bar -->
   
       <div class="col-9 bg-light px-4 d-flex flex-column align-items-center"> <!-- Content -->
-        <a class="btn btn-sm btn-secondary align-self-start mt-3 px-4" href="<%= request.getContextPath()%>/Admin/Accommodation">
+        <a class="btn btn-sm btn-secondary align-self-start mt-3 px-4" href="<%= request.getContextPath()%>/Admin/Event">
             <i class="fa fa-solid fa-left-long"></i>
         </a>
         
         <form style="width: 60%" class="mx-auto my-4 needs-validation" novalidate 
-            method="post" action="<%= request.getContextPath()%>/Admin/Accommodation/Create"> <!-- Create form-->
-          <p class="display-6 text-center mb-5">Create new Accommodation</p>
+            method="post" action="<%= request.getContextPath()%>/Admin/Event/Create"> <!-- Create form-->
+          <p class="display-6 text-center mb-5">Create new Event</p>
 
           <div class="row mb-3">
             <label for="name" class="col-form-label col-2">Name</label>
             <div class="col-10">
-              <input type="text" class="form-control" id="name" name="name" required>
+              <textarea class="form-control" id="name" name="name" rows="2" required></textarea>
               <div class="invalid-feedback">
-				        Please enter accommodation's name
+				        Please enter an event's name
 				      </div>
             </div>
           </div>
 
           <div class="row mb-3">
-            <label for="contact" class="col-form-label col-2">Contact</label>
+            <label for="timezone" class="col-form-label col-2">Timezone</label>
             <div class="col-10">
-              <input type="text" class="form-control" id="contact" name="contact" required>
+              <input type="text" class="form-control" id="timezone" name="timezone" required>
               <div class="invalid-feedback">
-                Please enter a contact infomation
+                Please enter timezone of event
               </div>
             </div>
           </div>
 
           <div class="row mb-3">
-            <label for="owner" class="col-form-label col-2">Owner</label>
+            <label for="location" class="col-form-label col-2">Location</label>
             <div class="col-10">
-              <input type="text" class="form-control" id="owner" name="owner" required>
+              <textarea class="form-control" id="location" name="location" rows="2" required></textarea>
               <div class="invalid-feedback">
-                Please enter an owner infomation
+                Please enter location of event
               </div>
             </div>
           </div>
 
-          <div class="row mb-3">
-            <label for="address" class="col-form-label col-2">Address</label>
-            <div class="col-10">
-              <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
-              <div class="invalid-feedback">
-                Please enter an address of accommodation
-              </div>
-            </div>
-          </div>
-
-          <div class="row mb-3">
-            <label for="website" class="col-form-label col-2">Website</label>
-            <div class="col-10">
-              <textarea class="form-control" id="website" name="website" rows="2" required></textarea>
-              <div class="invalid-feedback">
-                Please enter a website of accommodation
-              </div>
-            </div>
-          </div>
-         
           <div class="text-center">
             <button class="btn btn-primary px-5" type="submit">Create</button>
           </div>
         </form>
-        
         
       </div> <!-- End right column-->
     </div>
