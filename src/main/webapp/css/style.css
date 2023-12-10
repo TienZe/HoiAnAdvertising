@@ -17,6 +17,13 @@ html {
   font-size: 1.35rem;
   font-weight: 300;
 }
+	
+#accommodationTable td:nth-child(3) {
+  max-width: 350px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .content-justify {
   margin-top: 2rem;

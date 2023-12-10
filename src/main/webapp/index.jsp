@@ -682,40 +682,31 @@
               <form class="mb-3">
                 <input type="text" placeholder="Tìm kiếm ở đây" class="form-control">
               </form>
-              <table class="table table-striped">
+              <table class="table table-striped" id="accommodationTable">
                 <thead>
                   <tr>
                     <th style="border-top: none;">Tên cơ sở</th>
                     <th style="border-top: none;">Số điện thoại</th>
                     <th style="border-top: none;">Địa điểm</th>
-                    <th style="border-top: none;">Website</th>
+                    <th style="border-top: none; max-width: 50px">Website</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <%-- Sử dụng vòng lặp để tạo 5 bản ghi mẫu --%>
-                  <% for (int i = 1; i <= 5; i++) { %>
-                    <tr>
-                      <td>Cơ sở <%= i %></td>
-                      <td>123456789</td>
-                      <td>Hội An</td>
-                      <td><a href="http://www.sample.com">www.sample.com</a></td>
-                    </tr>
-                  <% } %>
-                  <tr style="border-bottom: 2px solid white;"></tr>
+                  <tr style="border-bottom: 1px solid white;"></tr>
                 </tbody>
               </table>
               <div class="pagination-justify justify-content-end d-flex">
                 <span class="mr-3">Số hàng</span>
-                <select id="recordCount" class="custom-select form-select-outline mr-3">
+                <select id="recordCount" class="custom-select form-select-outline mr-3" onchange="handleRecordCountChange()">
+                    <option value="10">10</option>
                     <option value="15">15</option>
+                    <option value="20">20</option>
                     <option value="30">30</option>
-                    <option value="45">45</option>
-                    <option value="60">60</option>
                 </select>
                 <div>
-                    <span class="mr-3" id="recordRange">1-15 của 140</span>
-                    <button class="form-select-outline" onclick="prevPage()">&lt;</button>
-                    <button class="form-select-outline" onclick="nextPage()">&gt;</button>
+                    <span class="mr-3" id="recordRange"></span>
+                    <button class="btn btn-outline-dark form-select-outline" disabled id="prevPage" onclick="prevPage()">&lt;</button>
+                    <button class="btn btn-outline-dark form-select-outline" disabled id="nextPage" onclick="nextPage()">&gt;</button>
                 </div>
               </div>    
             </div>
@@ -800,6 +791,7 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/lozad.min.js"></script>
+  <script src="js/dataHandle.js"></script>
 
 
   <script src="js/jquery.fancybox.min.js"></script>
