@@ -1,3 +1,5 @@
+<%@page import="dto.AlertMessage"%>
+<%@page import="controller.BaseServlet.TempData"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
 	<style>
 		section {
-			background-image: url("../images/HoiAn-hero3.jpg");
+			background-image: url("<%= request.getContextPath()%>/images/HoiAn-hero3.jpg");
 			background-repeat: no-repeat;
 		  background-position: center;
 		  background-size: cover;
@@ -23,7 +25,7 @@
   <div class="container h-100">
     <div class="row gy-4 align-items-center h-100">
     
-      <div class="col-12 col-md-6 mt-0" style="background-color: rgba(0, 0, 0, 0.25); border-radius: 10px;"> <!-- Left pane -->
+      <div class="col-12 col-md-6 mt-0 py-4" style="background-color: rgba(0, 0, 0, 0.25); border-radius: 10px;"> <!-- Left pane -->
         <div class="d-flex justify-content-center text-white">
           <div class="col-12 col-xl-9">
             
@@ -54,17 +56,33 @@
                 </div>
               </div>
             </div>
-            <form action="#!">
+            <form action="<%= request.getContextPath()%>/Login" method="post">
               <div class="row gy-3 overflow-hidden">
+              	<div class="col-12">
+                	<!-- Alert message -->
+							   	<%
+							   		if (request.getAttribute("TempData") != null) {
+							   			TempData tempData = (TempData)request.getAttribute("TempData");
+							   			AlertMessage alertMessage = (AlertMessage)tempData.get("alertMessage");
+							   	%>
+							     		<div class="alert alert-<%= alertMessage.getType()%> alert-dismissible fade show mt-3">
+							          <%= alertMessage.getMessage()%>
+							          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+							        </div>
+							   	<%	
+							   		}
+							   	%>
+                </div>
+                
                 <div class="col-12">
                   <div class="form-floating mb-3">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
-                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" name="username" id="username" required autocomplete="false">
+                    <label for="username" class="form-label">Username</label>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="form-floating mb-3">
-                    <input type="password" class="form-control" name="password" id="password" value="" placeholder="Password" required>
+                    <input type="password" class="form-control" name="password" id="password" required autocomplete="false">
                     <label for="password" class="form-label">Password</label>
                   </div>
                 </div>
@@ -74,6 +92,8 @@
                     <button class="btn btn-primary btn-lg" type="submit">Log in now</button>
                   </div>
                 </div>
+                
+                
               </div>
             </form>
             
@@ -85,7 +105,19 @@
 		  
   </div>
 </section>
-
+	
+  <%
+  	boolean showDialog = request.getAttribute("need-authen-error") != null;
+    
+    if (showDialog) {
+  %>
+			<script>
+				alert("You need to login to access that resources!");
+			</script>	
+	<%
+		} 
+	%>
+	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
       crossorigin="anonymous">

@@ -16,7 +16,7 @@ public class BaseServlet extends HttpServlet {
 		request.getRequestDispatcher(pathToView).forward(request, response);
 	}
 	
-	protected void redirecTo(String relativePathFromProject, HttpServletRequest request, HttpServletResponse response) throws IOException {
+	protected void redirectTo(String relativePathFromProject, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.sendRedirect(request.getContextPath() + "/" + relativePathFromProject);
 	}
 	
@@ -63,4 +63,32 @@ public class BaseServlet extends HttpServlet {
 	}
 	
 	static public class TempData extends HashMap<String, Object> {}
+	
+	static public class Identity {
+		private String username = "";
+		private boolean isAuthenticated = false;
+		
+		public Identity(String username, boolean isAuthen) {
+			this.username = username;
+			this.isAuthenticated = isAuthen;
+		}
+		
+		public Identity() {}
+		
+		public static Identity anonymous() {
+			return new Identity();
+		}
+		
+		public static Identity admin(String username) {
+			return new Identity(username, true);
+		}
+		
+		public String getUsername() {
+	        return username;
+	    }
+		
+		public boolean isAuthenticated() {
+	        return isAuthenticated;
+	    }
+	}
 }
