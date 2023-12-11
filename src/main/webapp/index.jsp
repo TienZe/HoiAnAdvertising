@@ -68,7 +68,6 @@
           <li><a href="#section-wander" class="nav-link">Rong ruổi Hội An</a></li>
           <li><a href="#section-accommodation" class="nav-link">Ở tại Hội An</a></li>
           <li><a href="#section-restaurant" class="nav-link">Ăn tại Hội An</a></li>
-          <li><a href="#section-events" class="nav-link">Lịch sự kiện</a>
         </ul>
         <ul class="social js-clone-nav">
           <li><a href="#"><span class="icon-instagram"></span></a></li>
@@ -681,45 +680,7 @@
             <div class="justify-content-center" data-aos="fade-up">
               <h2 style="margin-bottom: 1rem;">Đến Hội An, ở tại</h2>
               <form class="mb-3">
-                <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="searchValue" oninput="handleSearch()" autocomplete="off">
-              </form>
-              <table class="table table-striped" id="accommodationTable">
-                <thead>
-                  <tr>
-                    <th style="border-top: none;">Tên cơ sở</th>
-                    <th style="border-top: none;">Số điện thoại</th>
-                    <th style="border-top: none;">Địa điểm</th>
-                    <th style="border-top: none; max-width: 50px">Website</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="border-bottom: 1px solid white;"></tr>
-                </tbody>
-              </table>
-              <div class="pagination-justify justify-content-end d-flex">
-                <span class="mr-3">Số hàng</span>
-                <select id="recordCount" class="custom-select form-select-outline mr-3" onchange="handleRecordCountChange()">
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                </select>
-                <div>
-                    <span class="mr-3" id="recordRange"></span>
-                    <button class="btn btn-outline-dark form-select-outline" disabled id="prevPage" onclick="prevPage()">&lt;</button>
-                    <button class="btn btn-outline-dark form-select-outline" disabled id="nextPage" onclick="nextPage()">&gt;</button>
-                </div>
-              </div>    
-            </div>
-          </div>
-        </section>
-        
-        <section class="site-section" id="section-restaurant">
-          <div class="container">
-            <div class="justify-content-center" data-aos="fade-up">
-              <h2 style="margin-bottom: 1rem;">Đến Hội An, ăn tại</h2>
-              <form class="mb-3">
-                <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="searchValue" oninput="handleSearch()" autocomplete="off">
+                <input type="text" placeholder="Tìm kiếm ở đây" class="form-control">
               </form>
               <table class="table table-striped" id="accommodationTable">
                 <thead>
@@ -752,44 +713,6 @@
           </div>
         </section>
 
-		<section class="site-section" id="section-events">
-          <div class="container">
-            <div class="justify-content-center" data-aos="fade-up">
-              <h2 style="margin-bottom: 1rem;">Lịch sự kiện trong năm</h2>
-              <form class="mb-3">
-                <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="searchValue" oninput="handleSearch()" autocomplete="off">
-              </form>
-              <table class="table table-striped" id="accommodationTable">
-                <thead>
-                  <tr>
-                    <th style="border-top: none;">Tên cơ sở</th>
-                    <th style="border-top: none;">Số điện thoại</th>
-                    <th style="border-top: none;">Địa điểm</th>
-                    <th style="border-top: none; max-width: 50px">Website</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="border-bottom: 1px solid white;"></tr>
-                </tbody>
-              </table>
-              <div class="pagination-justify justify-content-end d-flex">
-                <span class="mr-3">Số hàng</span>
-                <select id="recordCount" class="custom-select form-select-outline mr-3" onchange="handleRecordCountChange()">
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                </select>
-                <div>
-                    <span class="mr-3" id="recordRange"></span>
-                    <button class="btn btn-outline-dark form-select-outline" disabled id="prevPage" onclick="prevPage()">&lt;</button>
-                    <button class="btn btn-outline-dark form-select-outline" disabled id="nextPage" onclick="nextPage()">&gt;</button>
-                </div>
-              </div>    
-            </div>
-          </div>
-        </section>
-		
         <section class="site-section" id="section-contact">
           <div class="container">
             <div class="row justify-content-center">
@@ -868,8 +791,7 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/lozad.min.js"></script>
-  <script src="js/accommodation.js"></script>
-  <!--<script src="js/events.js"></script> -->
+  <script src="js/dataHandle.js"></script>
 
 
   <script src="js/jquery.fancybox.min.js"></script>
