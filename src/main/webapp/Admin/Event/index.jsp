@@ -44,6 +44,11 @@
             Events
             <i class="fa-solid fa-calendar"></i>
           </a>
+          
+          <form action="<%= request.getContextPath()%>/Logout" method="post" id="form-logout"></form>
+          <button class="btn btn-secondary mt-4" type="submit" form="form-logout">
+            Logout
+          </button>
         </nav>
       </div> <!-- End navigation bar -->
   	
