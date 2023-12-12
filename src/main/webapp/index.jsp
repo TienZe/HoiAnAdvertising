@@ -62,12 +62,13 @@
       <div class="main-menu">
         <ul class="js-clone-nav">
           <li><a href="#section-home" class="nav-link">Về Hội An</a></li>
-          <li><a href="#section-photos" class="nav-link">Đôi nét Hội An</a></li>
+          <li><a href="#section-photos" class="nav-link">Khoảnh khắc Hội An</a></li>
           <li><a href="#section-about" class="nav-link">Hồi ức Hội An</a></li>
           <li><a href="#section-testimonial" class="nav-link">Cảm niệm Hội An</a></li>
           <li><a href="#section-wander" class="nav-link">Rong ruổi Hội An</a></li>
           <li><a href="#section-accommodation" class="nav-link">Ở tại Hội An</a></li>
           <li><a href="#section-restaurant" class="nav-link">Ăn tại Hội An</a></li>
+          <li><a href="#section-events" class="nav-link">Lịch sự kiện</a></li>
         </ul>
         <ul class="social js-clone-nav">
           <li><a href="#"><span class="icon-instagram"></span></a></li>
@@ -86,8 +87,7 @@
           <div class="col-md-10 text-center">
             <h1 class="lead heading-per-hero1 text-uppercase text-white " data-aos="fade-up"><b>Hội AN</b>
             </h1>
-            <p class="lead-justify text-white mb-4" data-aos="fade-up" data-aos-delay="100"><b>CỐ NHÂN MONG
-                GẶP GỠ!</b></p>
+            <p class="lead-justify text-white mb-4" data-aos="fade-up" data-aos-delay="100"><b>CỐ NHÂN MONG GẶP GỠ!</b></p>
           </div>
         </div>
       </section>
@@ -104,18 +104,11 @@
       </div>
       <div class="row justify-content-center align-items-center" style="margin-bottom: 3rem;">
         <p class="col-md-10 text-justify" style="line-height: 2em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-          dignissim sit amet, adipiscing nec, ultricies sed, dolor.
-          Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin
-          porttitor, orci nec nonummy molestie,
-          enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa,
-          scelerisque vitae, consequat in, pretium a, enim.
-          Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.
-          Praesent egestas leo in pede.
-          Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum
-          primis in faucibus orci luctus et ultrices
-          posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas
-          adipiscing ante non diam sodales hendrerit.
+          Xuôi về hạ lưu sông Thu Bồn, lờ lững qua một dạo bãi bồi bên sông, qua một dạo quê thơm thảo, ta thấy Hội An, êm đềm dịu dàng đón chào người
+          về từ bốn phương. Rất lạ, nhưng rất quen; những người sinh ra ở đây, họ lớn lên, họ rời đi, và họ thổn thức khi bước chân họ lại về với chốn cũ; 
+          lữ khách phương xa đến đây, họ đắm say, họ yêu và họ tương tư khi phải rời xa; những ai chưa từng đến, nhưng đã từng biết, họ muốn đến đây, họ đến đây
+          và họ cũng vô tình yêu lấy mất một vùng đất, như thể chưa từng xa lạ. Không ồn ào, không náo nhiệt, không hối hả, không vội vã, không bận rộn, người ta 
+          đến với Hội An, để yêu, để thương, để nhớ, và để gặp lại một người thân quen trong an tĩnh.      
         </p>
       </div>
       <section class="site-section-hero bg-image mb-5" style="background-image: url('images/HoiAn-hero2.jpg');"
@@ -128,75 +121,27 @@
               về giấc mơ lịch sử</p>
           </div>
       </section>
-      <div style="text-align:center; margin-bottom:1rem">
-        <p>
-          "Ly khách không về, ly khách đâu?
-          <br>
-          Cố nhân rưng lệ, cố nhân sầu
-          <br>
-          Bên bến Hoài giang, cố nhân tạ
-          <br>
-          Trăm lượt thuyền hoa, ly khách đâu... "
-        </p>
-      </div>
       <div class="row justify-content-center align-items-center" style="margin-bottom: 3rem;">
         <p class="col-md-10 text-justify" style="line-height: 2em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-          dignissim sit amet, adipiscing nec, ultricies sed, dolor.
-          Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin
-          porttitor, orci nec nonummy molestie,
-          enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa,
-          scelerisque vitae, consequat in, pretium a, enim.
-          Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.
-          Praesent egestas leo in pede.
-          Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum
-          primis in faucibus orci luctus et ultrices
-          posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas
-          adipiscing ante non diam sodales hendrerit.
+          Hội An – nơi mà cuộc sống cứ bình lặng như thế. Hội An – nơi mà dường như dòng chảy vô tình của thời gian chẳng thể nào vùi lấp đi cái không khí cổ xưa. 
+          Những mái ngói cũ phủ đầy rêu phong, những con đường ngập trong sắc đỏ của đèn lồng, những bức hoành phi được chạm trổ tinh vi, 
+          tất cả như đưa ta về với một thế giới của vài trăm năm trước. Đó mới chỉ là một phần dung dị ở khu phố cổ Hội An nhưng cũng đã đủ 
+          khiến người ta phải đắm say, đi quên lối. Tính bằng trăm năm, tất cả những giá trị từ lúc Hội An là bến cảng hoàng kim, đến xưa cũ hơn, tất cả
+          đều được bảo tồn và hiện hữu tại Hội An - nơi thời gian dừng lại giữa cuộc sống hiện đại.
         </p>
       </div>
       <section class="site-section-hero bg-image mb-5" style="background-image: url('images/HoiAn-hero1.jpg');"
         data-stellar-background-ratio="0.5" id="section-home">
         <div class="row justify-content-center align-items-center">
-          <div class="col-md-7 text-center">
-            <h1 class=" heading text-uppercase text-white" data-aos="fade-up">Snap</h1>
-            <p class="lead text-white mb-4" data-aos="fade-up" data-aos-delay="100">A Free Onepage Bootstrap
-              Template by <a href="https://untree.co/">Untree.co</a>. Under licensed <a
-                href="https://untree.co/license/" taget="_blank">Creative Common Attribution 3.0</a></p>
-            <p data-aos="fade-up" data-aos-delay="100"><a href="#section-contact"
-                class="btn btn-primary btn-md smoothscroll">Available for hire</a></p>
-          </div>
         </div>
       </section>
-      <div style="text-align:center; margin-bottom:1rem">
-        <p>
-          "Ly khách không về, ly khách đâu?
-          <br>
-          Cố nhân rưng lệ, cố nhân sầu
-          <br>
-          Bên bến Hoài giang, cố nhân tạ
-          <br>
-          Trăm lượt thuyền hoa, ly khách đâu... "
-        </p>
-      </div>
       <div class="row justify-content-center align-items-center" style="margin-bottom: 3rem;">
         <p class="col-md-10 text-justify" style="line-height: 2em;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor,
-          dignissim sit amet, adipiscing nec, ultricies sed, dolor.
-          Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin
-          porttitor, orci nec nonummy molestie,
-          enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa,
-          scelerisque vitae, consequat in, pretium a, enim.
-          Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.
-          Praesent egestas leo in pede.
-          Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum
-          primis in faucibus orci luctus et ultrices
-          posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas
-          adipiscing ante non diam sodales hendrerit.
         </p>
       </div>
 
       <div class="container-fluid site-section">
+
         <div class="row mb-3">
           <div class="col-12 text-center">
             <h2 class="heading">HỘI AN trong từng khoảnh khắc</h2>
@@ -205,179 +150,10 @@
         <section class="row align-items-stretch photos" id="section-photos">
           <div class="col-12">
             <div class="row align-items-stretch">
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-                <a href="images/img_4.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_4.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <a href="images/img_5.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_5.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="images/img_1.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-                <a href="images/img_2.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_2.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <a href="images/img_3.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_3.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="images/img_6.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_6.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-                <a href="images/img_7.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_7.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <a href="images/img_8.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_8.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="images/img_9.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_9.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-                <a href="images/img_10.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_10.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <a href="images/img_1.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="images/img_2.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_2.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-                <a href="images/img_3.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_3.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <a href="images/img_4.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_4.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="images/img_5.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_5.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-                <a href="images/img_6.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_6.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <a href="images/img_7.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_7.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="images/img_8.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_8.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <a href="images/img_9.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_9.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <a href="images/img_4.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_4.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="images/img_5.jpg" class="d-block photo-item" data-fancybox="gallery">
-                  <img src="images/img_5.jpg" alt="Image" class="img-fluid mb-0">
-                  <div class="photo-text-more">
-                    <span class="icon icon-eye"></span>
-                  </div>
-                </a>
-              </div>
             </div>
           </div>
         </section> <!-- #section-photos -->
+        <script src="js/imageLoad.js"></script>
 
         <section class="site-section" id="section-about">
           <div class="container">
@@ -387,13 +163,10 @@
 
                 <div data-aos="fade-up" data-aos-delay="100">
                   <h2 class="">Hội An - tìm về lịch sử</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor aperiam a velit.
-                    Harum eligendi quod reiciendis quos ullam libero est dolor, <a href="#">corporis
-                      dolores assumenda</a>, delectus, quidem voluptatibus dolorum temporibus
-                    enim!</p>
-                  <p>Neque facilis soluta, accusantium quaerat, a dipisci porro animi, hic fugiat id
-                    vero placeat dolorem accusamus sapiente odio consequatur debitis beatae eius
-                    quos alias. In recusandae magnam quis ipsum, asperiores mollitia!</p>
+                  <p>Ngược dòng lịch sử, đi tìm về lịch sử của vùng đất trù phú được lựa chọn làm người canh gác thời gian, Hội An đã trải qua nhiều thời kì,
+                  thăng trầm có, đều khác nhau và có những nét đặc trưng nhất định. Một thương cảng giàu có, sầm suất, một vùng bản nguyên lịch sử sơ khai,
+                  một vùng đất tang thương nhuốm màu chiến tranh ..., đều được Hội An lưu giữ trong hình hài của mình, để trở thành một chứng nhân sống của 
+                  lịch sử dân tộc. </p>
                 </div>
               </div>
             </div>
@@ -406,12 +179,9 @@
                         <h2 class="text-left" style="margin-bottom: 1rem;">Văn hóa Sa Huỳnh -
                           Bình minh lịch sử</h2>
                         <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Unde tenetur quis facilis quam optio voluptate totam placeat,
-                            doloremque, Neque facilis soluta, accusantium quaerat, a dipisci
-                            porro animi, hic fugiat id vero placeat dolorem accusamus
-                            sapiente odio consequatur debitis beatae eius quos alias. In
-                            recusandae magnam quis ipsum, asperiores mollitia!.&rdquo;</p>
+                          <p>&ldquo;Hội An có lịch sử trên 2000 năm. Những di tích khảo cổ có niên đại xa xưa nhất dẫn chúng ta về một thời đại
+                          văn hóa rực rỡ trong quá khứ - nền văn hóa Sa Huỳnh. Không chỉ là một nền văn minh sơ khai, dựa trên những di chỉ khảo cổ
+                          còn lại, Hội An đã từng là một vùng giao lưu thương mại, một cảng-thị rất xa trong quá khứ, và không kém phần nhộn nhịp.&rdquo;</p>
                         </blockquote>
                       </div>
                     </div>
@@ -425,12 +195,10 @@
                         <h2 class="text-left" style="margin-bottom: 1rem;;">Giấc mộng ChămPa -
                           Cố cảng hoàng kim</h2>
                         <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Unde tenetur quis facilis quam optio voluptate totam placeat,
-                            doloremque, Neque facilis soluta, accusantium quaerat, a dipisci
-                            porro animi, hic fugiat id vero placeat dolorem accusamus
-                            sapiente odio consequatur debitis beatae eius quos alias. In
-                            recusandae magnam quis ipsum, asperiores mollitia!.&rdquo;</p>
+                          <p>&ldquo;Sau thời kì hậu Sa Huỳnh, khoảng từ thế kỷ II - thế kỷ XV, một nền văn hóa khác, đã phát triển rực rỡ, rực rỡ nhất trong
+                          lịch sử phát triển của vùng đất nơi đây - nền văn hóa ChămPa. Nơi đây từng là vùng Lâm Ấp Phố - nơi giao thương nhộn nhịp nhất trong
+                          cả thời đại văn hóa ChămPa, có Đại Chiêm Hải Khẩu (cửa đại), nơi thuyền bè khắp nơi trên thế giới cập cảng giao thương buôn bán.
+                          Một thời kỳ vàng son trong lịch sử, hưng thịnh nhất, rực rỡ nhất, và được nhớ về như một giấc mộng hoàng kim của văn hóa ChămPa&rdquo;</p>
                         </blockquote>
                       </div>
                     </div>
@@ -444,12 +212,10 @@
                         <h2 class="text-left" style="margin-bottom: 1rem;">Thương cảng Hội An -
                           Thuyền vàng xứ sở</h2>
                         <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Unde tenetur quis facilis quam optio voluptate totam placeat,
-                            doloremque, Neque facilis soluta, accusantium quaerat, a dipisci
-                            porro animi, hic fugiat id vero placeat dolorem accusamus
-                            sapiente odio consequatur debitis beatae eius quos alias. In
-                            recusandae magnam quis ipsum, asperiores mollitia!.&rdquo;</p>
+                          <p>&ldquo;Sau khi đế chế ChămPa được đẩy lùi về Nam, tại thế kỷ XVI, cái tên Hội An ra đời, từng là một vùng cảng phát triển rực rỡ
+                          cư dân Đại Việt đến đây sinh sống, và phát triển vùng cảng mạnh mẽ. Thông thương trên biển trở nên nhiều hơn, đa dạng hơn, và tấp nập
+                          hơn. Cảng Hội An (Cửa Đại) đã đón tiếp trong lịch sử của mình không biết bao nhiêu tàu thuyền, trong đó có những con tàu lớn nhất từ Nhật
+                          Bản, Trung Quốc và Tây Dương. Tập trung vào phát triển thương nghiệp trên biển, Hội An đã trở thành một vùng đất vàng cho giao thương hàng hải&rdquo;</p>
                         </blockquote>
                       </div>
                     </div>
@@ -463,12 +229,10 @@
                         <h2 class="text-left" style="margin-bottom: 1rem;">Ký ức Hội An - Ký ức
                           vượt thời gian</h2>
                         <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Unde tenetur quis facilis quam optio voluptate totam placeat,
-                            doloremque, Neque facilis soluta, accusantium quaerat, a dipisci
-                            porro animi, hic fugiat id vero placeat dolorem accusamus
-                            sapiente odio consequatur debitis beatae eius quos alias. In
-                            recusandae magnam quis ipsum, asperiores mollitia!.&rdquo;</p>
+                          <p>&ldquo;Dù đã từng phát triển rực rỡ như thế, nhưng Hội An không phải chưa từng có những nỗi đau trong lịch sử. Những vết thương chiến
+                          tranh, chưa bao giờ lành trong trái tim của con người nơi đây. Một lịch sử tranh đấu sẽ luôn được kể lại cho con cháu, cho ngàn đời sau, vì
+                          "Chúng tôi bỏ qua, nhưng chúng tôi không tha thứ" - "We forgive, but never forget". Vươn mình trở thành điểm du lịch hàng đầu Việt Nam,
+                          nơi văn hóa giao hòa khắp nơi trên thế giới. Hội An tự tin trở thành nơi lưu giữ ký ức ngàn đời qua, cả niềm hạnh phúc lẫn nỗi đau dân tộc.&rdquo;</p>
                         </blockquote>
                       </div>
                     </div>
@@ -680,7 +444,7 @@
             <div class="justify-content-center" data-aos="fade-up">
               <h2 style="margin-bottom: 1rem;">Đến Hội An, ở tại</h2>
               <form class="mb-3">
-                <input type="text" placeholder="Tìm kiếm ở đây" class="form-control">
+                 <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="searchValue" oninput="handleSearch()" autocomplete="off">
               </form>
               <table class="table table-striped" id="accommodationTable">
                 <thead>
@@ -712,6 +476,84 @@
             </div>
           </div>
         </section>
+
+        <section class="site-section" id="section-restaurant">
+          <div class="container">
+            <div class="justify-content-center" data-aos="fade-up">
+              <h2 style="margin-bottom: 1rem;">Đến Hội An, ăn tại</h2>
+              <form class="mb-3">
+                 <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="searchValue" oninput="handleSearch()" autocomplete="off">
+              </form>
+              <table class="table table-striped" id="restaurantTable">
+                <thead>
+                  <tr>
+                    <th style="border-top: none;">Tên cơ sở</th>
+                    <th style="border-top: none;">Số điện thoại</th>
+                    <th style="border-top: none;">Địa điểm</th>
+                    <th style="border-top: none; max-width: 50px">Website</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid white;"></tr>
+                </tbody>
+              </table>
+              <div class="pagination-justify justify-content-end d-flex">
+                <span class="mr-3">Số hàng</span>
+                <select id="recordCount" class="custom-select form-select-outline mr-3" onchange="handleRecordCountChange()">
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                </select>
+                <div>
+                    <span class="mr-3" id="recordRange"></span>
+                    <button class="btn btn-outline-dark form-select-outline" disabled id="prevPage" onclick="prevPage()">&lt;</button>
+                    <button class="btn btn-outline-dark form-select-outline" disabled id="nextPage" onclick="nextPage()">&gt;</button>
+                </div>
+              </div>    
+            </div>
+          </div>
+        </section>
+        
+        <section class="site-section" id="section-events">
+          <div class="container">
+            <div class="justify-content-center" data-aos="fade-up">
+              <h2 style="margin-bottom: 1rem;">Lịch sự kiện trong năm</h2>
+              <form class="mb-3">
+                <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="searchValue" oninput="handleSearch()" autocomplete="off">
+              </form>
+              <table class="table table-striped" id="accommodationTable">
+                <thead>
+                  <tr>
+                    <th style="border-top: none;">Tên cơ sở</th>
+                    <th style="border-top: none;">Số điện thoại</th>
+                    <th style="border-top: none;">Địa điểm</th>
+                    <th style="border-top: none; max-width: 50px">Website</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid white;"></tr>
+                </tbody>
+              </table>
+              <div class="pagination-justify justify-content-end d-flex">
+                <span class="mr-3">Số hàng</span>
+                <select id="recordCount" class="custom-select form-select-outline mr-3" onchange="handleRecordCountChange()">
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                </select>
+                <div>
+                    <span class="mr-3" id="recordRange"></span>
+                    <button class="btn btn-outline-dark form-select-outline" disabled id="prevPage" onclick="prevPage()">&lt;</button>
+                    <button class="btn btn-outline-dark form-select-outline" disabled id="nextPage" onclick="nextPage()">&gt;</button>
+                </div>
+              </div>    
+            </div>
+          </div>
+        </section>
+        
+        
 
         <section class="site-section" id="section-contact">
           <div class="container">

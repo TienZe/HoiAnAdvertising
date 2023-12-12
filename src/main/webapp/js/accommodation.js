@@ -38,11 +38,11 @@ function handleRecordCountChange() {
 }
 
 function prevPage() {
-  sendPageRequest(--accommodationPageIndex);
+  sendPageRequestForSearch(--accommodationPageIndex);
 }
 
 function nextPage() {
-  sendPageRequest(++accommodationPageIndex);
+  sendPageRequestForSearch(++accommodationPageIndex);
 }
 
 function sendPageRequest(pageIndex) {
@@ -78,6 +78,12 @@ function deleteTableRows(tableId) {
   for (var i = table.rows.length - 1; i > 0; i--) {
     table.deleteRow(i);
   }
+}
+
+function sendPageRequestForSearch(pageIndex) {
+  var searchValue = document.getElementById("searchValue").value;
+  var selectedRecordCount = document.getElementById("recordCount").value;
+  sendAjaxRequest({ pageSize: selectedRecordCount, searchKey: searchValue, pageIndex: pageIndex }, displayAccommodations);
 }
 
 function updateRecordRange(indexOfFirstItem, pageSize, totalPages) {
