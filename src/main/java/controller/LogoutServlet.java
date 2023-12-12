@@ -16,6 +16,6 @@ public class LogoutServlet extends BaseServlet {
 			session.removeAttribute("username");
 		}
 		
-		redirectTo("/", request, response);
+		redirectTo("", request, response);
 	}
 }

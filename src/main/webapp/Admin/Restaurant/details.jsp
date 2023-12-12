@@ -1,7 +1,7 @@
-<%@page import="model.bean.Accommodation"%>
+<%@page import="model.bean.Restaurant"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,12 +32,12 @@
             Accommodations
             <i class="fa-solid fa-hotel"></i>
           </a>
-          <a class="nav-link text-white d-flex justify-content-between align-items-center" 
+          <a class="nav-link text-white active d-flex justify-content-between align-items-center" 
           	href="<%= request.getContextPath()%>/Admin/Restaurant">
             Restaurants
             <i class="fa-solid fa-utensils"></i>
           </a>
-          <a class="nav-link text-white active d-flex justify-content-between align-items-center" href="#">
+          <a class="nav-link text-white d-flex justify-content-between align-items-center" href="#">
             Events
             <i class="fa-solid fa-calendar"></i>
           </a>
@@ -50,49 +50,63 @@
       </div> <!-- End navigation bar -->
   
       <div class="col-9 bg-light px-4 d-flex flex-column align-items-center"> <!-- Content -->
-        <a class="btn btn-sm btn-secondary align-self-start mt-3 px-4" href="<%= request.getContextPath()%>/Admin/Event">
+        <a class="btn btn-sm btn-secondary align-self-start mt-3 px-4" href="<%= request.getParameter("returnUrl") %>">
             <i class="fa fa-solid fa-left-long"></i>
         </a>
         
+        <%
+        	Restaurant restaurant = (Restaurant)request.getAttribute("restaurant");
+        %>
         <form style="width: 60%" class="mx-auto my-4 needs-validation" novalidate 
-            method="post" action="<%= request.getContextPath()%>/Admin/Event/Create"> <!-- Create form-->
-          <p class="display-6 text-center mb-5">Create new Event</p>
-
+        		method="post" action="<%= request.getContextPath()%>/Admin/Restaurant/Update"> <!-- Update form-->
+          <p class="display-6 text-center mb-5">Details</p>
+					
+					<input name="id" value="<%= restaurant.getId()%>" hidden>
+					
           <div class="row mb-3">
             <label for="name" class="col-form-label col-2">Name</label>
             <div class="col-10">
-              <textarea class="form-control" id="name" name="name" rows="2" required></textarea>
+              <input type="text" class="form-control" id="name" name="name" value="<%= restaurant.getName()%>" required>
               <div class="invalid-feedback">
-				        Please enter an event's name
+				        Please enter restaurant's name
 				      </div>
             </div>
           </div>
 
           <div class="row mb-3">
-            <label for="timezone" class="col-form-label col-2">Timezone</label>
+            <label for="contact" class="col-form-label col-2">Contact</label>
             <div class="col-10">
-              <input type="text" class="form-control" id="timezone" name="timezone" required>
+              <input type="text" class="form-control" id="contact" name="contact" value="<%= restaurant.getContact()%>" required>
               <div class="invalid-feedback">
-                Please enter timezone of event
+                Please enter a contact infomation
               </div>
             </div>
           </div>
 
           <div class="row mb-3">
-            <label for="location" class="col-form-label col-2">Location</label>
+            <label for="owner" class="col-form-label col-2">Owner</label>
             <div class="col-10">
-              <textarea class="form-control" id="location" name="location" rows="2" required></textarea>
+              <input type="text" class="form-control" id="owner" name="owner" value="<%= restaurant.getOwner()%>" required>
               <div class="invalid-feedback">
-                Please enter location of event
+                Please enter an owner infomation
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="address" class="col-form-label col-2">Address</label>
+            <div class="col-10">
+              <textarea class="form-control" id="address" name="address" rows="2" required><%= restaurant.getAddress()%></textarea>
+              <div class="invalid-feedback">
+                Please enter an address of restaurant
               </div>
             </div>
           </div>
 
           <div class="text-center">
-            <button class="btn btn-primary px-5" type="submit">Create</button>
+            <button class="btn btn-primary px-5" type="submit">Update</button>
           </div>
         </form>
-        
       </div> <!-- End right column-->
     </div>
   </div>
@@ -114,7 +128,7 @@
 	    }, false);
     });
 	</script>
-
+	
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
       crossorigin="anonymous">
