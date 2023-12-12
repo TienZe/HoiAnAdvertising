@@ -44,6 +44,11 @@
             Events
             <i class="fa-solid fa-calendar"></i>
           </a>
+          
+          <form action="<%= request.getContextPath()%>/Logout" method="post" id="form-logout"></form>
+          <button class="btn btn-secondary mt-4" type="submit" form="form-logout">
+            Logout
+          </button>
         </nav>
       </div> <!-- End navigation bar -->
   	
@@ -209,7 +214,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          Delete this Accommodation!
+          Delete this Event!
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" id="btn-confirm-delete">Confirm</button>

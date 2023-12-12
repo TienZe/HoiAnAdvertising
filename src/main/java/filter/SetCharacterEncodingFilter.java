@@ -1,4 +1,4 @@
-package controller;
+package filter;
 
 import java.io.IOException;
 import javax.servlet.Filter;
@@ -8,6 +8,8 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+
+import controller.BaseServlet;
 
 @WebFilter("/*")
 public class SetCharacterEncodingFilter extends BaseServlet implements Filter {

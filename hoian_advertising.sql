@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2023 at 04:08 PM
+-- Generation Time: Dec 11, 2023 at 05:36 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -150,18 +150,27 @@ INSERT INTO `accommodations` (`ID`, `Name`, `Contact`, `Owner`, `Address`, `Webs
 (107, 'Hoi An Ancient House Resort & Spa', '0235 3923 ', 'John Ancient House', '377 Cửa Đại, Cẩm Châu, Hội An, Quảng Nam', 'ancient-house-resort-hoi-an.com'),
 (108, 'Vĩnh Hưng Resort', '0235 39103', 'John Vĩnh Hưng', '111 Ngô Quyền, Tp Hội An, Quảng Nam', 'vinh-hung-resort-hoi-an.com'),
 (109, 'Vĩnh Hưng 4 Resort & Spa', '0235 3864 ', 'John Ngô Quyền', '120 Ngô Quyền, Phường Minh An, Hội An, Quảng Nam', 'vinh-hung-4-resort-hoi-an.com'),
-(110, 'Senvila Boutique Resort', '0235 3752 ', 'John Trần Nhân Tông', 'Trần Nhân Tông, Cẩm Thanh, TP. Hội An, Quảng Nam', 'senvila-boutique-resort-hoi-an.com');
+(110, 'Senvila Boutique Resort', '0235 3752 ', 'John Trần Nhân Tông', 'Trần Nhân Tông, Cẩm Thanh, TP. Hội An, Quảng Nam', 'senvila-boutique-resort-hoi-an.com'),
+(113, 'Nhà nghỉ 1', '0905111111', 'Tiến Zé', 'af', 'fffffffffffff'),
+(115, 'acc1', 'acc1ct', 'ca', 'adf', 'Ã ');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comments`
+-- Table structure for table `admins`
 --
 
-CREATE TABLE `comments` (
-  `GuestName` varchar(255) NOT NULL,
-  `Comment` text NOT NULL
+CREATE TABLE `admins` (
+  `Username` varchar(30) NOT NULL,
+  `Password` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`Username`, `Password`) VALUES
+('admin', 'btcnw');
 
 -- --------------------------------------------------------
 
@@ -187,7 +196,7 @@ INSERT INTO `events` (`ID`, `Name`, `Timezone`, `Location`) VALUES
 (4, 'Lễ cúng Cầu Bông Trà Quế', '(28/01/202) (Mồng 7 tháng Giêng)', 'Làng rau Trà Quế'),
 (5, 'Lễ tế Tiền hiền Kim Bồng', '02/02/2023 (12 tháng Giêng)', 'Đình Tiền hiền; Làng nghề mộc Kim Bồng'),
 (6, 'Tết Nguyên Tiêu Quý Mão-2023', '31/01 - 06/02/2023 (10-16 tháng Giêng)', 'Quan Công miếu, hội quán, đình, chùa.'),
-(7, 'Lễ cúng thần Nông', '06/02/2023 (16 tháng Giêng)', 'Bãi bắp khối Thanh Nam, P.Cẩm Nam'),
+(7, 'Lễ cúng thần nông', '06/02/2023 (16 tháng Giêng Âm lịch)', 'Hội An, Quảng Name'),
 (8, 'Lễ Vía Lục Tánh Vương Gia', '07/3/2023 (16/02, Quý Mão)', 'Hội quán Phúc Kiến'),
 (9, 'Lễ hội Cầu Ngư tại Cửa Đại', '07 & 08/3/2023 (16 & 17/02, Quý Mão)', 'Lăng Ông (khối Phước Thịnh, Cửa Đại), cửa biển'),
 (10, 'Giờ Trái Đất 2023', '25/3/2023', 'Thành phố Hội An'),
@@ -220,7 +229,8 @@ INSERT INTO `events` (`ID`, `Name`, `Timezone`, `Location`) VALUES
 (37, 'Mừng Giáng Sinh 2023', '24 & 25/12/2023', 'Các nhà thờ; khách sạn, nhà hàng...'),
 (38, 'Đêm rằm phố cổ Hội An', 'Đêm 14 Âm lịch hằng tháng', 'Khu phố cổ'),
 (39, 'Chợ phiên làng Chài Tân Thành', 'Tối thứ 7, CN hằng tuần', 'Số 17 - 48, đường Nguyễn Phan Vinh'),
-(40, 'Đêm Cù Lao', 'Tối thứ 7, CN hằng tuần', 'Cù Lao Chàm');
+(40, 'Đêm Cù Lao', 'Tối thứ 7, CN hằng tuần', 'Cù Lao Chàm'),
+(43, 'e', 'e', 'e');
 
 -- --------------------------------------------------------
 
@@ -277,13 +287,13 @@ ALTER TABLE `restaurants`
 -- AUTO_INCREMENT for table `accommodations`
 --
 ALTER TABLE `accommodations`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `restaurants`

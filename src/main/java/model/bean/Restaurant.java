@@ -18,6 +18,13 @@ public class Restaurant {
         this.owner = owner;
         this.address = address;
     }
+    
+    public Restaurant(String name, String contact, String owner, String address) {
+        this.name = name;
+        this.contact = contact;
+        this.owner = owner;
+        this.address = address;
+    }
 
     public int getId() {
         return id;
