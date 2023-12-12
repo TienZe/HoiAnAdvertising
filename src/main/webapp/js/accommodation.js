@@ -1,15 +1,16 @@
 var accommodationPageIndex = 1;
 
-function fetchDataAndDisplay() {
-  sendAjaxRequest({ pageSize: 10 }, displayAccommodations);
+function fetchAccommodationDataAndDisplayTable() {
+  sendAjaxRequestForAccommodation({ pageSize: 10 }, displayAccommodationTable);
 }
 
-function clearTableRows() {
+function clearAccommodationTableRows() {
   deleteTableRows("accommodationTable");
 }
 
-function displayAccommodations(accommodations, pageSize, pageIndex, indexOfFirstItem, totalPages) {
-  clearTableRows("accommodationTable");
+function displayAccommodationTable(accommodations, pageSize, pageIndex, indexOfFirstItem, totalPages, totalItems) {
+  console.log("Display accommodations");
+  clearAccommodationTableRows();
 
   var table = document.getElementById("accommodationTable");
 
@@ -26,45 +27,46 @@ function displayAccommodations(accommodations, pageSize, pageIndex, indexOfFirst
     row.cells[3].innerHTML = '<a href="https://example.com" target="_blank">' + accommodation.website + '</a>';
   });
 
-  updateRecordRange(indexOfFirstItem, pageSize, totalPages);
+  updateAccommodationRecordRange(indexOfFirstItem, pageSize, totalPages, totalItems);
 
-  updateButtonStatus(pageIndex, totalPages);
+  updateAccommodationButtonStatus(pageIndex, totalPages);
 }
 
-function handleRecordCountChange() {
+function handleAccommodationRecordCountChange() {
   accommodationPageIndex = 1;
-  var selectedRecordCount = document.getElementById("recordCount").value;
-  sendAjaxRequest({ pageSize: selectedRecordCount }, displayAccommodations);
+  var selectedRecordCount = document.getElementById("accommodationRecordCount").value;
+  sendAjaxRequestForAccommodation({ pageSize: selectedRecordCount }, displayAccommodationTable);
 }
 
-function prevPage() {
-  sendPageRequestForSearch(--accommodationPageIndex);
+function prevAccommodationPage() {
+  sendAccommodationPageRequest(--accommodationPageIndex);
 }
 
-function nextPage() {
-  sendPageRequestForSearch(++accommodationPageIndex);
+function nextAccommodationPage() {
+  sendAccommodationPageRequest(++accommodationPageIndex);
 }
 
-function sendPageRequest(pageIndex) {
-  var selectedRecordCount = document.getElementById("recordCount").value;
-  sendAjaxRequest({ pageSize: selectedRecordCount, pageIndex: pageIndex }, displayAccommodations);
+function sendAccommodationPageRequest(pageIndex) {
+  var selectedRecordCount = document.getElementById("accommodationRecordCount").value;
+  var searchValue = document.getElementById("accommodationSearchValue").value;
+  sendAjaxRequestForAccommodation({ pageSize: selectedRecordCount, pageIndex: pageIndex, searchKey: searchValue }, displayAccommodationTable);
 }
 
-function handleSearch() {
+function handleAccommodationSearch() {
   accommodationPageIndex = 1;
-  var searchValue = document.getElementById("searchValue").value;
-  var selectedRecordCount = document.getElementById("recordCount").value;
-  sendAjaxRequest({ pageSize: selectedRecordCount, searchKey: searchValue }, displayAccommodations);
+  var searchValue = document.getElementById("accommodationSearchValue").value;
+  var selectedRecordCount = document.getElementById("accommodationRecordCount").value;
+  sendAjaxRequestForAccommodation({ pageSize: selectedRecordCount, searchKey: searchValue }, displayAccommodationTable);
 }
 
-function sendAjaxRequest(data, successCallback) {
+function sendAjaxRequestForAccommodation(data, successCallback) {
   $.ajax({
     type: "GET",
     url: "Accommodation",
     data: data,
     dataType: "json",
     success: function (data) {
-      successCallback(data.items, data.pageSize, data.pageIndex, data.indexOfFirstItem, data.totalPages);
+      successCallback(data.items, data.pageSize, data.pageIndex, data.indexOfFirstItem, data.totalPages, data.totalItems);
     },
     error: function (error) {
       console.error(error);
@@ -80,27 +82,26 @@ function deleteTableRows(tableId) {
   }
 }
 
-function sendPageRequestForSearch(pageIndex) {
-  var searchValue = document.getElementById("searchValue").value;
-  var selectedRecordCount = document.getElementById("recordCount").value;
-  sendAjaxRequest({ pageSize: selectedRecordCount, searchKey: searchValue, pageIndex: pageIndex }, displayAccommodations);
-}
-
-function updateRecordRange(indexOfFirstItem, pageSize, totalPages) {
+function updateAccommodationRecordRange(indexOfFirstItem, pageSize, totalPages, totalItems) {
   var indexOfLastItem = indexOfFirstItem + pageSize - 1;
-  var recordRange = indexOfFirstItem + '-' + indexOfLastItem + ' của ' + totalPages;
-  document.getElementById("recordRange").innerHTML = recordRange;
+  var recordRange;
+  if (accommodationPageIndex === totalPages)
+  	recordRange = indexOfFirstItem + '-' + totalItems + ' of ' + totalItems;
+  else
+  	recordRange = indexOfFirstItem + '-' + indexOfLastItem + ' of ' + totalItems;
+  document.getElementById("accommodationRecordRange").innerHTML = recordRange;
 }
 
-function updateButtonStatus(pageIndex, totalPages) {
-  var prevButton = document.getElementById("prevPage");
-  var nextButton = document.getElementById("nextPage");
+function updateAccommodationButtonStatus(pageIndex, totalPages) {
+  var prevButton = document.getElementById("accommodationPrevPage");
+  var nextButton = document.getElementById("accommodationNextPage");
 
   prevButton.disabled = pageIndex === 1;
   nextButton.disabled = pageIndex === totalPages;
 }
 
-// Call fetchDataAndDisplay() function when the page is loaded
-$(document).ready(function () {
-  fetchDataAndDisplay();
+// Call fetchAccommodationDataAndDisplayTable() function when the page is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  fetchAccommodationDataAndDisplayTable();
+  console.log("Display accommodations");
 });

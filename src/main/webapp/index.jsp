@@ -264,10 +264,8 @@
                         </figure>
                         <p class="text-white"><strong>Jorge Smith</strong></p>
                         <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Unde tenetur quis facilis quam optio voluptate totam placeat,
-                            doloremque. Sit repellat ipsum dolor fugit similique itaque
-                            maxime saepe ipsam. Velit, harum!&rdquo;</p>
+                          <p>&ldquo;Quiet, serene, full of charm and allure, I am truly captivated and have lost my heart to Hoi An.&rdquo;</p>
+                          <p>&ldquo;Tĩnh lặng, lắng đọng, đầy ấn tượng và thu hút, tôi thật sự bị Hội An chiếm mất trái tim.&rdquo;</p>
                         </blockquote>
                       </div>
 
@@ -278,10 +276,8 @@
                         </figure>
                         <p class="text-white"><strong>TQV</strong></p>
                         <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Unde tenetur quis facilis quam optio voluptate totam placeat,
-                            doloremque. Sit repellat ipsum dolor fugit similique itaque
-                            maxime saepe ipsam. Velit, harum!&rdquo;</p>
+                          <p>&ldquo;A place where time seems to stand still, while humans continue to change every day, this land always welcomes me with a primitive and untouched appearance.&rdquo;</p>
+                          <p>&ldquo;Một nơi thời gian như dừng lại, khi con người vẫn luôn đổi thay hằng ngày, mảnh đất này luôn chào đón tôi bằng một dung diện nguyên thủy ban sơ.&rdquo;</p>
                         </blockquote>
                       </div>
 
@@ -292,10 +288,8 @@
                         </figure>
                         <p class="text-white"><strong>Habrush Statkievič</strong></p>
                         <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Unde tenetur quis facilis quam optio voluptate totam placeat,
-                            doloremque. Sit repellat ipsum dolor fugit similique itaque
-                            maxime saepe ipsam. Velit, harum!&rdquo;</p>
+                          <p>&ldquo;I love this place, I love its tranquility; when I arrive, I love it, and when I leave, I cherish it in all my youth.&rdquo;</p>
+                          <p>&ldquo;Tôi yêu nơi đây, tôi yêu sự tĩnh tại này, khi tôi đến - tôi yêu nó và khi tôi rời đi - tôi tương tư trong cả thanh xuân của mình.&rdquo;</p> 
                         </blockquote>
                       </div>
 
@@ -306,10 +300,8 @@
                         </figure>
                         <p class="text-white"><strong>Alma Toran</strong></p>
                         <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Unde tenetur quis facilis quam optio voluptate totam placeat,
-                            doloremque. Sit repellat ipsum dolor fugit similique itaque
-                            maxime saepe ipsam. Velit, harum!&rdquo;</p>
+                          <p>&ldquo;Pure, pristine, the present, future, and past all coexist here, a sacred land where, even on my first visit, I feel no sense of strangeness.&rdquo;</p>
+                          <p>&ldquo;Thánh thuần, tinh khiết, cả hiện tại, tương lai và quá khứ đều hiện diện ở đây, một vùng đất thiêng liêng, dù chỉ mới đến lần đầu, tôi vẫn không có chút cảm giác xa lạ nào.&rdquo;</p>
                         </blockquote>
                       </div>
 
@@ -320,10 +312,8 @@
                         </figure>
                         <p class="text-white"><strong>Stella Harbrig</strong></p>
                         <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Unde tenetur quis facilis quam optio voluptate totam placeat,
-                            doloremque. Sit repellat ipsum dolor fugit similique itaque
-                            maxime saepe ipsam. Velit, harum!&rdquo;</p>
+                          <p>&ldquo;Like a relic preserved after a great flood, here it seems as if time has been forgotten for centuries, truly mystical, truly radiant.&rdquo;</p>
+                          <p>&ldquo;Như một thánh tích còn sót lại sau trận đại hồng thủy, nơi đây như thể đã bị thời gian ngủ quên hàng thế kỷ vậy, thật sự huyền ảo, thật sự rực rỡ.&rdquo;</p>
                         </blockquote>
                       </div>
 
@@ -334,10 +324,8 @@
                         </figure>
                         <p class="text-white"><strong>Nguyễn Thi Nhân</strong></p>
                         <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Unde tenetur quis facilis quam optio voluptate totam placeat,
-                            doloremque. Sit repellat ipsum dolor fugit similique itaque
-                            maxime saepe ipsam. Velit, harum!&rdquo;</p>
+                          <p>&ldquo;Tôi đến Hội An lần đầu, nhưng không thấy lạ lẫm, cũng không thấy lạc lõng. Một cảm giác như quê hương, như một người quen cũ
+                          chạy trong suy nghĩ của tôi. Thật lạ quá, tôi chưa từng đến Hội An, nhưng tôi đã nhớ hội An từ bao lâu rồi?&rdquo;</p>
                         </blockquote>
                       </div>
 
@@ -348,10 +336,9 @@
                         </figure>
                         <p class="text-white"><strong>Thân Kim Cúc</strong></p>
                         <blockquote>
-                          <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Unde tenetur quis facilis quam optio voluptate totam placeat,
-                            doloremque. Sit repellat ipsum dolor fugit similique itaque
-                            maxime saepe ipsam. Velit, harum!&rdquo;</p>
+                          <p>&ldquo;Sinh ra và lớn lên ở mảnh đất này, nó cho tôi thật nhiều hoài niệm. Ở mảnh đất này, có người đến, có người đi, có người sinh ra
+                          và lớn lên, nhưng tôi thấy tất thảy họ đều có trong mình cái niềm nhớ gì đó lạ lắm, day dứt, lưu luyến, một mảnh đất chỉ đặt chân đến đã
+                          thấy thân thương.&rdquo;</p>
                         </blockquote>
                       </div>
                     </div>
@@ -444,7 +431,7 @@
             <div class="justify-content-center" data-aos="fade-up">
               <h2 style="margin-bottom: 1rem;">Đến Hội An, ở tại</h2>
               <form class="mb-3">
-                 <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="searchValue" oninput="handleSearch()" autocomplete="off">
+                 <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="accommodationSearchValue" oninput="handleAccommodationSearch()" autocomplete="off">
               </form>
               <table class="table table-striped" id="accommodationTable">
                 <thead>
@@ -461,99 +448,96 @@
               </table>
               <div class="pagination-justify justify-content-end d-flex">
                 <span class="mr-3">Số hàng</span>
-                <select id="recordCount" class="custom-select form-select-outline mr-3" onchange="handleRecordCountChange()">
+                <select id="accommodationRecordCount" class="custom-select form-select-outline mr-3" onchange="handleAccommodationRecordCountChange()">
                     <option value="10">10</option>
                     <option value="15">15</option>
                     <option value="20">20</option>
                     <option value="30">30</option>
                 </select>
                 <div>
-                    <span class="mr-3" id="recordRange"></span>
-                    <button class="btn btn-outline-dark form-select-outline" disabled id="prevPage" onclick="prevPage()">&lt;</button>
-                    <button class="btn btn-outline-dark form-select-outline" disabled id="nextPage" onclick="nextPage()">&gt;</button>
+                    <span class="mr-3" id="accommodationRecordRange"></span>
+                    <button class="btn btn-outline-dark form-select-outline" disabled id="accommodationPrevPage" onclick="prevAccommodationPage()">&lt;</button>
+                    <button class="btn btn-outline-dark form-select-outline" disabled id="accommodationNextPage" onclick="nextAccommodationPage()">&gt;</button>
                 </div>
               </div>    
             </div>
           </div>
         </section>
-
+        
         <section class="site-section" id="section-restaurant">
-          <div class="container">
-            <div class="justify-content-center" data-aos="fade-up">
-              <h2 style="margin-bottom: 1rem;">Đến Hội An, ăn tại</h2>
-              <form class="mb-3">
-                 <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="searchValue" oninput="handleSearch()" autocomplete="off">
-              </form>
-              <table class="table table-striped" id="restaurantTable">
-                <thead>
-                  <tr>
-                    <th style="border-top: none;">Tên cơ sở</th>
-                    <th style="border-top: none;">Số điện thoại</th>
-                    <th style="border-top: none;">Địa điểm</th>
-                    <th style="border-top: none; max-width: 50px">Website</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="border-bottom: 1px solid white;"></tr>
-                </tbody>
-              </table>
-              <div class="pagination-justify justify-content-end d-flex">
-                <span class="mr-3">Số hàng</span>
-                <select id="recordCount" class="custom-select form-select-outline mr-3" onchange="handleRecordCountChange()">
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                </select>
-                <div>
-                    <span class="mr-3" id="recordRange"></span>
-                    <button class="btn btn-outline-dark form-select-outline" disabled id="prevPage" onclick="prevPage()">&lt;</button>
-                    <button class="btn btn-outline-dark form-select-outline" disabled id="nextPage" onclick="nextPage()">&gt;</button>
-                </div>
-              </div>    
-            </div>
-          </div>
-        </section>
-        
+		  <div class="container">
+		    <div class="justify-content-center" data-aos="fade-up">
+		      <h2 style="margin-bottom: 1rem;">Những nhà hàng tại Hội An</h2>
+		      <form class="mb-3">
+		        <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="restaurantSearchValue" oninput="handleRestaurantSearch()" autocomplete="off">
+		      </form>
+		      <table class="table table-striped" id="restaurantsTable">
+		        <thead>
+		          <tr>
+		            <th style="border-top: none;">Tên nhà hàng</th>
+		            <th style="border-top: none;">Số điện thoại</th>
+		            <th style="border-top: none;">Chủ sở hữu</th>
+		            <th style="border-top: none; max-width: 50px">Địa điểm</th>
+		          </tr>
+		        </thead>
+		        <tbody>
+		          <tr style="border-bottom: 1px solid white;"></tr>
+		        </tbody>
+		      </table>
+		      <div class="pagination-justify justify-content-end d-flex">
+		        <span class="mr-3">Số hàng</span>
+		        <select id="restaurantRecordCount" class="custom-select form-select-outline mr-3" onchange="handleRestaurantRecordCountChange()">
+		          <option value="10">10</option>
+		          <option value="15">15</option>
+		          <option value="20">20</option>
+		          <option value="30">30</option>
+		        </select>
+		        <div>
+		          <span class="mr-3" id="restaurantRecordRange"></span>
+		          <button class="btn btn-outline-dark form-select-outline" disabled id="restaurantPrevPage" onclick="prevRestaurantPage()">&lt;</button>
+		          <button class="btn btn-outline-dark form-select-outline" disabled id="restaurantNextPage" onclick="nextRestaurantPage()">&gt;</button>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</section>
+
         <section class="site-section" id="section-events">
-          <div class="container">
-            <div class="justify-content-center" data-aos="fade-up">
-              <h2 style="margin-bottom: 1rem;">Lịch sự kiện trong năm</h2>
-              <form class="mb-3">
-                <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="searchValue" oninput="handleSearch()" autocomplete="off">
-              </form>
-              <table class="table table-striped" id="accommodationTable">
-                <thead>
-                  <tr>
-                    <th style="border-top: none;">Tên cơ sở</th>
-                    <th style="border-top: none;">Số điện thoại</th>
-                    <th style="border-top: none;">Địa điểm</th>
-                    <th style="border-top: none; max-width: 50px">Website</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style="border-bottom: 1px solid white;"></tr>
-                </tbody>
-              </table>
-              <div class="pagination-justify justify-content-end d-flex">
-                <span class="mr-3">Số hàng</span>
-                <select id="recordCount" class="custom-select form-select-outline mr-3" onchange="handleRecordCountChange()">
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                </select>
-                <div>
-                    <span class="mr-3" id="recordRange"></span>
-                    <button class="btn btn-outline-dark form-select-outline" disabled id="prevPage" onclick="prevPage()">&lt;</button>
-                    <button class="btn btn-outline-dark form-select-outline" disabled id="nextPage" onclick="nextPage()">&gt;</button>
-                </div>
-              </div>    
-            </div>
-          </div>
-        </section>
-        
-        
+		  <div class="container">
+		    <div class="justify-content-center" data-aos="fade-up">
+		      <h2 style="margin-bottom: 1rem;">Các sự kiện tại Hội An</h2>
+		      <form class="mb-3">
+		        <input type="text" placeholder="Tìm kiếm ở đây" class="form-control" id="eventsSearchValue" oninput="handleEventsSearch()" autocomplete="off">
+		      </form>
+		      <table class="table table-striped" id="eventsTable">
+		        <thead>
+		          <tr>
+		            <th style="border-top: none; max-width : 400px">Tên sự kiện</th>
+		            <th style="border-top: none;">Thời gian tổ chức</th>
+		            <th style="border-top: none;">Địa điểm tổ chức</th>
+		          </tr>
+		        </thead>
+		        <tbody>
+		          <tr style="border-bottom: 1px solid white;"></tr>
+		        </tbody>
+		      </table>
+		      <div class="pagination-justify justify-content-end d-flex">
+		        <span class="mr-3">Số hàng</span>
+		        <select id="eventsRecordCount" class="custom-select form-select-outline mr-3" onchange="handleEventsRecordCountChange()">
+		          <option value="10">10</option>
+		          <option value="15">15</option>
+		          <option value="20">20</option>
+		          <option value="30">30</option>
+		        </select>
+		        <div>
+		          <span class="mr-3" id="eventsRecordRange"></span>
+		          <button class="btn btn-outline-dark form-select-outline" disabled id="eventsPrevPage" onclick="prevEventsPage()">&lt;</button>
+		          <button class="btn btn-outline-dark form-select-outline" disabled id="eventsNextPage" onclick="nextEventsPage()">&gt;</button>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</section>
 
         <section class="site-section" id="section-contact">
           <div class="container">
@@ -633,8 +617,10 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/lozad.min.js"></script>
+  <script src="js/events.js"></script>
   <script src="js/accommodation.js"></script>
-  <!--<script scr="js/events.js"></script>-->
+  <script src="js/restaurants.js"></script>
+  
 
 
   <script src="js/jquery.fancybox.min.js"></script>

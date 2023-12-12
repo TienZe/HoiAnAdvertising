@@ -1,67 +1,71 @@
 var eventsPageIndex = 1;
 
-function fetchDataAndDisplay() {
-  sendAjaxRequest({ pageSize: 10 }, displayevents);
+function fetchEventDataAndDisplayTable() {
+  sendAjaxRequestForEvents({ pageSize: 10 }, displayEventsTable);
 }
 
-function displayevents(events, pageSize, pageIndex, indexOfFirstItem, totalPages) {
+function clearEventsTableRows() {
   deleteTableRows("eventsTable");
+}
+
+function displayEventsTable(events, pageSize, pageIndex, indexOfFirstItem, totalPages, totalItems) {
+  console.log("Display events");
+  clearEventsTableRows();
 
   var table = document.getElementById("eventsTable");
 
-  events.forEach(function (events, index) {
+  events.forEach(function (event, index) {
     var row = table.insertRow(index + 1);
 
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 3; i++) {
       row.insertCell(i);
     }
 
-    row.cells[0].innerHTML = '<a href="https://example.com" target="_blank">' + events.name + '</a>';
-    row.cells[1].innerHTML = events.timezone;
-    row.cells[2].innerHTML = events.location;
+    row.cells[0].innerHTML = '<a href="https://example.com" target="_blank">' + event.name + '</a>';
+    row.cells[1].innerHTML = event.timeZone;
+    row.cells[2].innerHTML = event.location;
   });
 
-  updateRecordRange(indexOfFirstItem, pageSize, totalPages);
+  updateEventsRecordRange(indexOfFirstItem, pageSize, totalPages, totalItems);
 
-  updateButtonStatus(pageIndex, totalPages);
+  updateEventsButtonStatus(pageIndex, totalPages);
 }
 
-function handleRecordCountChange() {
+function handleEventsRecordCountChange() {
   eventsPageIndex = 1;
-  var selectedRecordCount = document.getElementById("recordEventsCount").value;
-  sendAjaxRequest({ pageSize: selectedRecordCount }, displayevents);
+  var selectedRecordCount = document.getElementById("eventsRecordCount").value;
+  sendAjaxRequestForEvents({ pageSize: selectedRecordCount }, displayEventsTable);
 }
 
-function prevPage() {
-  sendPageRequestForSearch(--eventsPageIndex);
+function prevEventsPage() {
+  sendEventsPageRequest(--eventsPageIndex);
 }
 
-function nextPage() {
-  sendPageRequestForSearch(++eventsPageIndex);
+function nextEventsPage() {
+  sendEventsPageRequest(++eventsPageIndex);
 }
 
-function handleSearch() {
+function sendEventsPageRequest(pageIndex) {
+  var selectedRecordCount = document.getElementById("eventsRecordCount").value;
+  var searchValue = document.getElementById("eventsSearchValue").value;
+  sendAjaxRequestForEvents({ pageSize: selectedRecordCount, pageIndex: pageIndex, searchKey: searchValue }, displayEventsTable);
+}
+
+function handleEventsSearch() {
   eventsPageIndex = 1;
-  var searchValue = document.getElementById("searchEventValue").value;
-  var selectedRecordCount = document.getElementById("recordEventCount").value;
-  sendAjaxRequest({ pageSize: selectedRecordCount, searchKey: searchValue }, displayevents);
+  var searchValue = document.getElementById("eventsSearchValue").value;
+  var selectedRecordCount = document.getElementById("eventsRecordCount").value;
+  sendAjaxRequestForEvents({ pageSize: selectedRecordCount, searchKey: searchValue }, displayEventsTable);
 }
 
-function sendPageRequestForSearch(pageIndex) {
-  var searchValue = document.getElementById("searchEventValue").value;
-  var selectedRecordCount = document.getElementById("recordEventCount").value;
-  sendAjaxRequest({ pageSize: selectedRecordCount, searchKey: searchValue, pageIndex: pageIndex }, displayevents);
-}
-
-
-function sendAjaxRequest(data, successCallback) {
+function sendAjaxRequestForEvents(data, successCallback) {
   $.ajax({
     type: "GET",
-    url: "events",
+    url: "Event",
     data: data,
     dataType: "json",
     success: function (data) {
-      successCallback(data.items, data.pageSize, data.pageIndex, data.indexOfFirstItem, data.totalPages);
+      successCallback(data.items, data.pageSize, data.pageIndex, data.indexOfFirstItem, data.totalPages, data.totalItems);
     },
     error: function (error) {
       console.error(error);
@@ -69,29 +73,27 @@ function sendAjaxRequest(data, successCallback) {
   });
 }
 
-function deleteTableRows(tableId) {
-  var table = document.getElementById(tableId);
-
-  for (var i = table.rows.length - 1; i > 0; i--) {
-    table.deleteRow(i);
-  }
-}
-
-function updateRecordRange(indexOfFirstItem, pageSize, totalPages) {
+function updateEventsRecordRange(indexOfFirstItem, pageSize, totalPages, totalItems) {
   var indexOfLastItem = indexOfFirstItem + pageSize - 1;
-  var recordRange = indexOfFirstItem + '-' + indexOfLastItem + ' của ' + totalPages;
-  document.getElementById("recordValueRange").innerHTML = recordRange;
+  var recordRange;
+  if (eventsPageIndex === totalPages)
+    recordRange = indexOfFirstItem + '-' + totalItems + ' of ' + totalPages;
+  else
+    recordRange = indexOfFirstItem + '-' + indexOfLastItem + ' of ' + totalPages;
+  document.getElementById("eventsRecordRange").innerHTML = recordRange;
 }
 
-function updateButtonStatus(pageIndex, totalPages) {
-  var prevButton = document.getElementById("prevEventPage");
-  var nextButton = document.getElementById("nextEventPage");
+function updateEventsButtonStatus(pageIndex, totalPages) {
+  var prevButton = document.getElementById("eventsPrevPage");
+  var nextButton = document.getElementById("eventsNextPage");
 
   prevButton.disabled = pageIndex === 1;
   nextButton.disabled = pageIndex === totalPages;
 }
 
-// Call fetchDataAndDisplay() function when the page is loaded
-/*$(document).ready(function () {
-  fetchDataAndDisplay();
-});*/
+// Call fetchEventDataAndDisplayTable() function when the page is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  fetchEventDataAndDisplayTable();
+  console.log("Display events");
+});
+

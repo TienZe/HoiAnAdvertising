@@ -1,72 +1,72 @@
-var restaurantsPageIndex = 1;
+var restaurantPageIndex = 1;
 
-function fetchDataAndDisplay() {
-  sendAjaxRequest({ pageSize: 10 }, displayrestaurants);
+function fetchRestaurantDataAndDisplayTable() {
+  sendAjaxRequestForRestaurant({ pageSize: 10 }, displayRestaurantTable);
 }
 
-function clearTableRows() {
+function clearRestaurantTableRows() {
   deleteTableRows("restaurantsTable");
 }
 
-function displayrestaurants(restaurants, pageSize, pageIndex, indexOfFirstItem, totalPages) {
-  clearTableRows("restaurantsTable");
+function displayRestaurantTable(restaurants, pageSize, pageIndex, indexOfFirstItem, totalPages, totalItems) {
+  console.log("Display restaurants");
+  clearRestaurantTableRows();
 
   var table = document.getElementById("restaurantsTable");
 
-  restaurants.forEach(function (restaurants, index) {
+  restaurants.forEach(function (restaurant, index) {
     var row = table.insertRow(index + 1);
 
     for (var i = 0; i < 4; i++) {
       row.insertCell(i);
     }
 
-    row.cells[0].innerHTML = '<a href="https://example.com" target="_blank">' + restaurants.name + '</a>';
-    row.cells[1].innerHTML = restaurants.contact;
-    row.cells[2].innerHTML = restaurants.owner;
-    row.cells[3].innerHTML = '<a href="https://example.com" target="_blank">' + restaurants.address + '</a>';
+    row.cells[0].innerHTML = '<a href="https://example.com" target="_blank">' + restaurant.name + '</a>';
+    row.cells[1].innerHTML = restaurant.contact;
+    row.cells[2].innerHTML = restaurant.owner;
+    row.cells[3].innerHTML = '<a href="https://example.com" target="_blank">' + restaurant.address + '</a>';
   });
 
-  updateRecordRange(indexOfFirstItem, pageSize, totalPages);
+  updateRestaurantRecordRange(indexOfFirstItem, pageSize, totalPages, totalItems);
 
-  updateButtonStatus(pageIndex, totalPages);
+  updateRestaurantButtonStatus(pageIndex, totalPages);
 }
 
-function handleRecordCountChange() {
-  restaurantsPageIndex = 1;
-  var selectedRecordCount = document.getElementById("recordRestaurantCount").value;
-  sendAjaxRequest({ pageSize: selectedRecordCount }, displayrestaurants);
+function handleRestaurantRecordCountChange() {
+  restaurantPageIndex = 1;
+  var selectedRecordCount = document.getElementById("restaurantRecordCount").value;
+  sendAjaxRequestForRestaurant({ pageSize: selectedRecordCount }, displayRestaurantTable);
 }
 
-function prevPage() {
-  sendPageRequestForSearch(--restaurantsPageIndex);
+function prevRestaurantPage() {
+  sendRestaurantPageRequest(--restaurantPageIndex);
 }
 
-function nextPage() {
-  sendPageRequestForSearch(++restaurantsPageIndex);
+function nextRestaurantPage() {
+  sendRestaurantPageRequest(++restaurantPageIndex);
 }
 
-function handleSearch() {
-  restaurantsPageIndex = 1;
-  var searchValue = document.getElementById("searchRestaurantValue").value;
-  var selectedRecordCount = document.getElementById("recordRestaurantCount").value;
-  sendAjaxRequest({ pageSize: selectedRecordCount, searchKey: searchValue }, displayrestaurants);
+function sendRestaurantPageRequest(pageIndex) {
+  var selectedRecordCount = document.getElementById("restaurantRecordCount").value;
+  var searchValue = document.getElementById("restaurantSearchValue").value;
+  sendAjaxRequestForRestaurant({ pageSize: selectedRecordCount, pageIndex: pageIndex, searchKey: searchValue }, displayRestaurantTable);
 }
 
-function sendPageRequestForSearch(pageIndex) {
-  var searchValue = document.getElementById("searchRestaurantValue").value;
-  var selectedRecordCount = document.getElementById("recordRestaurantCount").value;
-  sendAjaxRequest({ pageSize: selectedRecordCount, searchKey: searchValue, pageIndex: pageIndex }, displayrestaurants);
+function handleRestaurantSearch() {
+  restaurantPageIndex = 1;
+  var searchValue = document.getElementById("restaurantSearchValue").value;
+  var selectedRecordCount = document.getElementById("restaurantRecordCount").value;
+  sendAjaxRequestForRestaurant({ pageSize: selectedRecordCount, searchKey: searchValue }, displayRestaurantTable);
 }
 
-
-function sendAjaxRequest(data, successCallback) {
+function sendAjaxRequestForRestaurant(data, successCallback) {
   $.ajax({
     type: "GET",
-    url: "restaurants",
+    url: "Restaurant",
     data: data,
     dataType: "json",
     success: function (data) {
-      successCallback(data.items, data.pageSize, data.pageIndex, data.indexOfFirstItem, data.totalPages);
+      successCallback(data.items, data.pageSize, data.pageIndex, data.indexOfFirstItem, data.totalPages, data.totalItems);
     },
     error: function (error) {
       console.error(error);
@@ -74,29 +74,27 @@ function sendAjaxRequest(data, successCallback) {
   });
 }
 
-function deleteTableRows(tableId) {
-  var table = document.getElementById(tableId);
-
-  for (var i = table.rows.length - 1; i > 0; i--) {
-    table.deleteRow(i);
-  }
-}
-
-function updateRecordRange(indexOfFirstItem, pageSize, totalPages) {
+function updateRestaurantRecordRange(indexOfFirstItem, pageSize, totalPages, totalItems) {
   var indexOfLastItem = indexOfFirstItem + pageSize - 1;
-  var recordRange = indexOfFirstItem + '-' + indexOfLastItem + ' của ' + totalPages;
-  document.getElementById("recorRestaurantdRange").innerHTML = recordRange;
+  var recordRange;
+  if (restaurantPageIndex === totalPages)
+  	recordRange = indexOfFirstItem + '-' + totalItems + ' of ' + totalPages;
+  else
+  	recordRange = indexOfFirstItem + '-' + indexOfLastItem + ' of ' + totalPages;
+  document.getElementById("restaurantRecordRange").innerHTML = recordRange;
 }
 
-function updateButtonStatus(pageIndex, totalPages) {
-  var prevButton = document.getElementById("prevRestaurantPage");
-  var nextButton = document.getElementById("nextRestaurantPage");
+function updateRestaurantButtonStatus(pageIndex, totalPages) {
+  var prevButton = document.getElementById("restaurantPrevPage");
+  var nextButton = document.getElementById("restaurantNextPage");
 
   prevButton.disabled = pageIndex === 1;
   nextButton.disabled = pageIndex === totalPages;
 }
 
-// Call fetchDataAndDisplay() function when the page is loaded
-$(document).ready(function () {
-  fetchDataAndDisplay();
+// Call fetchRestaurantDataAndDisplayTable() function when the page is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  fetchRestaurantDataAndDisplayTable();
+  console.log("Display restaurants");
 });
+

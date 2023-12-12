@@ -19,7 +19,26 @@ html {
 }
 	
 #accommodationTable td:nth-child(3) {
-  max-width: 350px !important;
+  max-width: 300px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#eventsTable td:nth-child(1) {
+  max-width: 400px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#eventsTable td:nth-child(2) {
+  max-width: 300px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#eventsTable td:nth-child(3) {
+  max-width: 300px !important;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
