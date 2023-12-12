@@ -791,7 +791,8 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/lozad.min.js"></script>
-  <script src="js/dataHandle.js"></script>
+  <script src="js/accommodation.js"></script>
+  <!--<script scr="js/events.js"></script>-->
 
 
   <script src="js/jquery.fancybox.min.js"></script>
