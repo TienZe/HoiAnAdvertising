@@ -44,6 +44,11 @@ html {
   white-space: nowrap;
 }
 
+#restaurantsTable td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .content-justify {
   margin-top: 2rem;
   align-items: center;

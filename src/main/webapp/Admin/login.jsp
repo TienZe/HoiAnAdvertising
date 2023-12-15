@@ -112,7 +112,11 @@
     if (showDialog) {
   %>
 			<script>
-				alert("You need to login to access that resources!");
+				window.addEventListener('load', function() {
+					alert("You need to login to access that resources!");
+				});
+
+				
 			</script>	
 	<%
 		} 

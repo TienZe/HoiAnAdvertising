@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2023 at 05:36 PM
+-- Generation Time: Dec 15, 2023 at 03:24 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -41,7 +41,7 @@ CREATE TABLE `accommodations` (
 --
 
 INSERT INTO `accommodations` (`ID`, `Name`, `Contact`, `Owner`, `Address`, `Website`) VALUES
-(1, 'Phượng Vĩ Homestay', '090 576 26', 'Tracy Nguyen', '39 Nguyễn Trường Tộ, Sơn Phong, Tp Hội An, Quảng Nam', 'PhuongViHomestay.com'),
+(1, 'Phượng Vĩ Homestay VIP', '090 576 26', 'Tracy Nguyen', '39 Nguyễn Trường Tộ, Sơn Phong, Tp Hội An, Quảng Nam', 'PhuongViHomestay.com'),
 (2, 'Coconut Garden Homestay', '0235 3939 ', 'Henry Le', '122 Nguyễn Khoa, Cẩm Nam, Hội An, Quảng Nam', 'CoconutGardenHomestay.com'),
 (3, 'Horizon Homestay Hoi An', '0235 3920 ', 'Lily Le', '23 Xuân Diệu, Tân An, Hội An, Quảng Nam', 'HorizonHomestayHoiAn.com'),
 (4, 'An Hoi Town Homestay', '0235 3910 ', 'Andrew Nguyen', '109 Nguyễn Phúc Tần, Phường Minh An, Hội An, Quảng Nam', 'AnHoiTownHomestay.com'),
@@ -255,7 +255,27 @@ INSERT INTO `restaurants` (`ID`, `Name`, `Contact`, `Owner`, `Address`) VALUES
 (2, 'Mango Rooms', '+84 235 39', 'Ms. Duc Tran', '111 Nguyễn Thái Học, Hội An'),
 (3, 'Brother\'s Café', '+84 235 38', 'Ms. Trinh Diem Vy', '27-29 Phan Bội Châu, Hội An'),
 (4, 'Cargo Club', '+84 235 39', 'Ms. Trinh Diem Vy', '107-109 Nguyễn Thái Học, Hội An'),
-(5, 'Ancient Faifo', '+84 235 39', 'Ms. Trinh Diem Vy', '66 Nguyễn Thái Học, Hội An');
+(5, 'Ancient Faifo', '+84 235 39', 'Ms. Trinh Diem Vy', '66 Nguyễn Thái Học, Hội An'),
+(8, 'Morning Glory Restaurant', '123456789', 'Nguyen Huy', '106 Nguyễn Thái Học, Hội An, Quảng Nam, Việt Nam'),
+(9, 'Ba Le Well Restaurant', '987654321', 'Tran Anh', '45/51 Trần Hưng Đạo, Hội An, Quảng Nam, Việt Nam'),
+(10, 'Ancient Faifo', '456789123', 'Le Thao', '66 Nguyễn Thái Học, Hội An, Quảng Nam, Việt Nam'),
+(11, 'Vy\'s Market Restaurant and Cooking School', '789123456', 'Pham Van', '3 Nguyễn Hoàng, Hội An, Quảng Nam, Việt Nam'),
+(12, 'Mango Rooms', '321654987', 'Trinh Thuy', '111 Nguyễn Thái Học, Hội An, Quảng Nam, Việt Nam'),
+(13, 'Cargo Club', '555111222', 'Tran Minh', '107-109 Nguyễn Thái Học, Hội An, Quảng Nam, Việt Nam'),
+(14, 'Dingo Deli', '333444555', 'Nguyen Mai', '226 Ểdean, Hội An, Quảng Nam, Việt Nam'),
+(15, 'Secret Garden', '777888999', 'Le Van', '60 Le Loi, Hội An, Quảng Nam, Việt Nam'),
+(16, 'Nu Eatery', '999000111', 'Pham Anh', '10A Nguyen Thanh Chau, Hội An, Quảng Nam, Việt Nam'),
+(17, 'Reaching Out Tea House', '222333444', 'Tran Thao', '131 Trần Phú, Hội An, Quảng Nam, Việt Nam'),
+(18, 'Hai Scout Cafe', '111222333', 'Nguyen Hoa', '98 Nguyen Thai Hoc, Hội An, Quảng Nam, Việt Nam'),
+(19, 'White Rose Restaurant', '444555666', 'Le An', '533 Hai Ba Trung, Hội An, Quảng Nam, Việt Nam'),
+(20, 'Ancient House Restaurant', '777888999', 'Tran Huyen', '377 Ểdean, Hội An, Quảng Nam, Việt Nam'),
+(21, 'Baby Mustard Restaurant', '101112131', 'Le Quoc', '58 Le Loi, Hội An, Quảng Nam, Việt Nam'),
+(22, 'Tam Tam Cafe', '141516171', 'Nguyen Thanh', '110 Nguyen Thai Hoc, Hội An, Quảng Nam, Việt Nam'),
+(23, 'Mermaid Restaurant', '181920212', 'Tran Anh', '2 Tran Phu, Hội An, Quảng Nam, Việt Nam'),
+(24, 'Brother\'s Cafe', '222324252', 'Nguyen Minh', '27 Le Loi, Hội An, Quảng Nam, Việt Nam'),
+(25, 'Red Bridge Restaurant', '262728293', 'Le Tuan', 'Thon 4 Cam Thanh, Hội An, Quảng Nam, Việt Nam'),
+(26, 'Ganesh Indian Restaurant', '303132333', 'Tran Van', '24 Tran Cao Van, Hội An, Quảng Nam, Việt Nam'),
+(27, 'Mango Mango Restaurant', '343536373', 'Nguyen Linh', '45 Nguyen Phuc Chu, Hội An, Quảng Nam, Việt Nam');
 
 --
 -- Indexes for dumped tables
@@ -287,7 +307,7 @@ ALTER TABLE `restaurants`
 -- AUTO_INCREMENT for table `accommodations`
 --
 ALTER TABLE `accommodations`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -299,7 +319,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `restaurants`
 --
 ALTER TABLE `restaurants`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
