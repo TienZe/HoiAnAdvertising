@@ -352,72 +352,78 @@
         <section class="site-section" id="section-wander">
           <div class="container">
             <div class="justify-content-center" data-aos="fade-up">
+              <h2 class="heading">Rong ruổi Hội An</h2>
               <div class="row">
                 <div class="col-4 mb-5" style="margin-right : 30px">
-                  <img src="images/HoiAn-hero1.jpg" class="img-fluid">
+                  <img src="images/HoiAn_wanderer1.jpg" class="img-fluid">
                 </div>
                 <div class="col-7">
-                  <h2 style="margin-bottom: 1rem;">Hội An gì gì đó</h2>
+                  <h2 style="margin-bottom: 1rem;">Xích lô - chở quá khứ về</h2>
                   <blockquote>
-                    <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde tenetur
-                      quis facilis quam optio voluptate totam placeat, doloremque. Sit repellat
-                      ipsum dolor fugit similique itaque maxime saepe ipsam. Velit, harum!&rdquo;
+                    <p>&ldquo;Còn gì bằng một ngày nắng đẹp trời, ngồi trên xích lô và dạo vài vòng quanh phố cổ.
+                    Như thu cả thế giới lại bằng ánh nhìn đời thường, trải nghiệm đi xích lô ở Hội An sẽ là một trải nghiệm
+                    tuyệt vời mà du khách có được khi chọn Hội An làm địa điểm dừng chân trên hành trình của mình.&rdquo;
                     </p>
                   </blockquote>
                 </div>
               </div>
               <div class="row">
                 <div class="col-4 mb-5" style="margin-right : 30px">
-                  <img src="images/HoiAn-hero1.jpg" class="img-fluid">
+                  <img src="images/HoiAn_wanderer2.jpg" class="img-fluid">
                 </div>
                 <div class="col-7">
-                  <h2 style="margin-bottom: 1rem;">Hội An gì gì đó</h2>
+                  <h2 style="margin-bottom: 1rem;">Tết Nguyên Tiêu - nét văn hóa cha ông còn lưu truyền gìn giữ</h2>
                   <blockquote>
-                    <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde tenetur
-                      quis facilis quam optio voluptate totam placeat, doloremque. Sit repellat
-                      ipsum dolor fugit similique itaque maxime saepe ipsam. Velit, harum!&rdquo;
+                    <p>&ldquo;Tết Nguyên Tiêu ở Hội An đặc biệt hơn cả, không phải vì Hội An là địa điểm du lịch mang nét
+                    đẹp của lịch sử mà Tết Nguyên Tiêu mới đẹp như vậy, từ bản nguyên ban sơ, Hội An đã luôn xem đây là một
+                    ngày quan trọng trong đời sống sinh hoạt của mình. Du khách sẽ không muốn bỏ lỡ ngày hội này, và đêm Nguyên Tiêu
+                    độc bản trên sông Hoài, một cuộc du hành của ánh sáng và lịch sử.&rdquo;
                     </p>
                   </blockquote>
                 </div>
               </div>
               <div class="row">
                 <div class="col-4 mb-5" style="margin-right : 30px">
-                  <img src="images/HoiAn-hero1.jpg" class="img-fluid">
+                  <img src="images/HoiAn_wanderer3.jpg" class="img-fluid">
                 </div>
                 <div class="col-7">
-                  <h2 style="margin-bottom: 1rem;">Hội An gì gì đó</h2>
+                  <h2 style="margin-bottom: 1rem;">Hội An trong đời sống thường nhật của dân cư</h2>
                   <blockquote>
-                    <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde tenetur
-                      quis facilis quam optio voluptate totam placeat, doloremque. Sit repellat
-                      ipsum dolor fugit similique itaque maxime saepe ipsam. Velit, harum!&rdquo;
+                    <p>&ldquo;
+                    Không phải bao giờ Hội An cũng gắn liền với phố cổ, với đèn lồng, người dân nơi đây vẫn có cuộc sống nhộn nhịp của riêng họ, và
+                    trong riêng một bầu không khí đời thường hơn, quen thuộc hơn. Phía sau những con đường tấp nập người du lịch qua lại, phía sau những 
+                    hào quang của một địa điểm du lịch, bạn có thể nhìn thấy Hội An rất gần gũi, quen thuộc hơn với việc ghé thăm khu chợ. Ở đây du khách
+                    sẽ thấy được một Hội An không hào nhoáng, nhưng cũng rất thú vị.&rdquo;
                     </p>
                   </blockquote>
                 </div>
               </div>
               <div class="row">
                 <div class="col-4 mb-5" style="margin-right : 30px">
-                  <img src="images/HoiAn-hero1.jpg" class="img-fluid">
+                  <img src="images/HoiAn_wanderer4.jpg" class="img-fluid">
                 </div>
                 <div class="col-7">
-                  <h2 style="margin-bottom: 1rem;">Hội An gì gì đó</h2>
+                  <h2 style="margin-bottom: 1rem;">Tái hiện ngàn năm lịch sử với Ký ức Hội An</h2>
                   <blockquote>
-                    <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde tenetur
-                      quis facilis quam optio voluptate totam placeat, doloremque. Sit repellat
-                      ipsum dolor fugit similique itaque maxime saepe ipsam. Velit, harum!&rdquo;
+                    <p>&ldquo;25000 m2, 500 diễn viên chuyên nghiệp, kỷ lục chương trình biểu diễn nghệ thuật ngoài trời lớn nhất Việt Nam, kỷ lục sân khấu ngoài trời
+                    lớn nhất Việt Nam ... Đó là những ấn tượng đem lại chỉ từ show tổ chức Ký ức Hội An. Mãn nhãn, mãn nhĩ, thỏa mãn được tất cả các giác quan, đắm
+                    chìm trong lịch sử ngàn năm được tái hiện thông qua hoạt cảnh, ánh sáng và âm thanh, đấy mới là những trải nghiệm không thể quên được đối với du
+                    khách, đây không phải một buổi biểu diễn, đây chính là lịch sử, đây chính là chân trải nghiệm.&rdquo;
                     </p>
                   </blockquote>
                 </div>
               </div>
               <div class="row">
-                <div class="col-4 mb-2" style="margin-right : 30px">
-                  <img src="images/HoiAn-hero1.jpg" class="img-fluid">
+                <div class="col-4 mb-5" style="margin-right : 30px">
+                  <img src="images/HoiAn_wanderer5.jpg" class="img-fluid">
                 </div>
                 <div class="col-7">
-                  <h2>Hội An gì gì đó</h2>
+                  <h2 style="margin-bottom: 1rem;">Tinh hoa ẩm thực - Mỳ Quảng</h2>
                   <blockquote>
-                    <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde tenetur
-                      quis facilis quam optio voluptate totam placeat, doloremque. Sit repellat
-                      ipsum dolor fugit similique itaque maxime saepe ipsam. Velit, harum!&rdquo;
+                    <p>&ldquo;Xứ đất Quảng Nam có thứ quà cả mấy trăm năm nay không thay đổi vị. Thức quà đó đặc trưng đến nỗi, nó chứa đựng cả 
+                    cái quá trình hạt gạo từ mầm nảy thầy cây, trĩu hạt rồi thành sợi mỳ của chỉ riêng người Quảng. Bắc, Trung, Nam, đi hết Việt Nam,
+                    đi ra ngoài thế giới, tô mỳ Quảng đem theo cái tình cảm của con người nông dân chân chất thiện lành biểu trưng cho tất cả xem. Du khách
+                    phương xa, nếu đến xứ Quảng, đến Hội An không ngồi lại thưởng thức chút tinh hoa này, e rằng có phần thiếu sót.&rdquo;
                     </p>
                   </blockquote>
                 </div>
@@ -502,7 +508,7 @@
 		  </div>
 		</section>
 
-        <section class="site-section" id="section-events">
+    <section class="site-section" id="section-events">
 		  <div class="container">
 		    <div class="justify-content-center" data-aos="fade-up">
 		      <h2 style="margin-bottom: 1rem;">Các sự kiện tại Hội An</h2>
@@ -538,70 +544,7 @@
 		    </div>
 		  </div>
 		</section>
-
-        <section class="site-section" id="section-contact">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-md-8">
-                <h2 class=" mb-5 heading">Contact</h2>
-
-                <form action="#">
-                  <div class="row form-group">
-                    <div class="col-md-6 mb-3 mb-md-0">
-                      <label class="" for="fname">First Name</label>
-                      <input type="text" id="fname" class="form-control">
-                    </div>
-                    <div class="col-md-6">
-                      <label class="" for="lname">Last Name</label>
-                      <input type="text" id="lname" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="row form-group">
-
-                    <div class="col-md-12">
-                      <label class="" for="email">Email</label>
-                      <input type="email" id="email" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="row form-group">
-
-                    <div class="col-md-12">
-                      <label class="" for="subject">Subject</label>
-                      <input type="subject" id="subject" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="row form-group mb-5">
-                    <div class="col-md-12">
-                      <label class="" for="message">Message</label>
-                      <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
-                    </div>
-                  </div>
-
-                  <div class="row form-group">
-                    <div class="col-md-12">
-                      <input type="submit" value="Send Message" class="btn btn-primary btn-md">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="row justify-content-center">
-          <div class="col-md-12 text-center py-5">
-            <p>Copyright &copy;
-              <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
-              Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a
-                href="https://themewagon.com">ThemeWagon</a><!-- License information: https://untree.co/license/ -->
-            </p>
-          </div>
-        </div>
-      </div>
-    </main>
+  </main>
 
   </div> <!-- .site-wrap -->
 
