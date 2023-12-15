@@ -50,7 +50,7 @@
 
     <header class="header-bar d-flex d-lg-block align-items-center site-navbar-target" data-aos="fade-right">
       <div class="site-logo">
-        <a href="index.html">Hội An</a>
+        <a href="#">Hội An</a>
       </div>
 
       <div class="d-inline-block d-lg-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;">
@@ -71,10 +71,10 @@
           <li><a href="#section-events" class="nav-link">Lịch sự kiện</a></li>
         </ul>
         <ul class="social js-clone-nav">
-          <li><a href="#"><span class="icon-instagram"></span></a></li>
-          <li><a href="#"><span class="icon-facebook"></span></a></li>
-          <li><a href="#"><span class="icon-twitter"></span></a></li>
-          <li><a href="#"><span class="icon-linkedin"></span></a></li>
+          <li><a href="https://www.facebook.com/nguoihoianpage" class="social-item" target="_blank"><span class="icon-instagram"></span></a></li>
+          <li><a href="https://www.facebook.com/nguoihoianpage" class="social-item" target="_blank"><span class="icon-facebook"></span></a></li>
+          <li><a href="https://www.facebook.com/nguoihoianpage" class="social-item" target="_blank"><span class="icon-twitter"></span></a></li>
+          <li><a href="https://www.facebook.com/nguoihoianpage" class="social-item" target="_blank"><span class="icon-linkedin"></span></a></li>
         </ul>
       </div>
     </header>
@@ -544,6 +544,21 @@
 		    </div>
 		  </div>
 		</section>
+
+  <!-- Footer, with only big line of text : "Đây là sản phẩm đề tài, nhằm mục đích mô phỏng một trang web quảng bá đời" -->
+  <footer class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>
+              <h1>Đây là sản phẩm đề tài, nhằm mục đích mô phỏng một trang web quảng bá đời sống du lịch tại Hội An, Việt Nam.</h1>
+              <br>
+              <h2><a href="https://www.facebook.com/nguoihoianpage" class="social-item" target="_blank"><span class="icon-facebook2">Nguồn ảnh.</span></a></h2>
+          </p>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   </div> <!-- .site-wrap -->
